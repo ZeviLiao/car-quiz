@@ -116,6 +116,12 @@ function runQuiz(questions: Question[], requestedCount: number): boolean {
     } else {
       console.log(`✘ 答錯了！`);
       console.log(`正確答案是：${q.correctAnswer}。`);
+      
+      // 只有在是非題且正確答案是X時，才顯示說明
+      if (q.type === 'true-false' && q.correctAnswer === 'X' && q.explanation) {
+        console.log(`說明：${q.explanation}`);
+      }
+      
       wrongCount++;
       currentFailedQuestions.push(q);
     }

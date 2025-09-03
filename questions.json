@@ -2,43 +2,43 @@
   {
     "id": "001",
     "type": "multiple-choice",
-    "text": "柴油引擎燃燒是靠:",
+    "text": "柴油引擎燃燒是靠",
     "options": {
-      "1": "空氣壓縮後所產生之高溫著火。",
-      "2": "火星塞點火。",
-      "3": "空氣和柴油混合壓縮之高溫著火。"
+      "1": "空氣壓縮後所產生之高溫著火",
+      "2": "火星塞點 火",
+      "3": "空氣和柴油混合壓縮之高溫著火"
     },
     "correctAnswer": "1"
   },
   {
     "id": "002",
     "type": "multiple-choice",
-    "text": "柴油引擎在壓縮行程是:",
+    "text": "柴油引擎在壓縮行程是",
     "options": {
-      "1": "壓縮純柴油。",
-      "2": "壓縮空氣與柴油的混合氣。",
-      "3": "壓縮純空氣。"
+      "1": "壓縮純柴油",
+      "2": "壓縮空氣與柴油的混合 氣",
+      "3": "壓縮純空氣"
     },
     "correctAnswer": "3"
   },
   {
     "id": "003",
     "type": "multiple-choice",
-    "text": "柴油進入汽缸是靠:",
+    "text": "柴油進入汽缸是靠",
     "options": {
-      "1": "化油器。",
-      "2": "大氣壓力。",
-      "3": "噴射泵與噴油嘴。"
+      "1": "化油器",
+      "2": "大氣壓力",
+      "3": "噴射泵與噴油 嘴"
     },
     "correctAnswer": "3"
   },
   {
     "id": "004",
     "type": "multiple-choice",
-    "text": "柴油引擎的水套功能是:",
+    "text": "柴油引擎的水套功能是",
     "options": {
-      "1": "潤滑。",
-      "2": "冷卻。",
+      "1": "潤滑",
+      "2": "冷卻",
       "3": "傳動"
     },
     "correctAnswer": "2"
@@ -46,109 +46,109 @@
   {
     "id": "005",
     "type": "multiple-choice",
-    "text": "柴油引擎,正常工作溫度為:",
+    "text": "柴油引擎，正常工作溫度為",
     "options": {
-      "1": "華氏70度至85度。",
-      "2": "攝氏75度到95度。",
-      "3": "攝氏140度到180度。"
+      "1": "華氏７０度至８５度",
+      "2": "攝氏７ ５度到９５度",
+      "3": "攝氏１４０度到１８０度"
     },
     "correctAnswer": "2"
   },
   {
     "id": "006",
     "type": "multiple-choice",
-    "text": "柴油引擎之噴油嘴,噴入汽缸的是:",
+    "text": "柴油引擎之噴油嘴，噴入汽缸的是",
     "options": {
-      "1": "純柴油。",
-      "2": "柴油與空氣的混合汽。",
-      "3": "純空氣。"
+      "1": "純柴油",
+      "2": "柴油與空氣的混 合汽",
+      "3": "純空氣"
     },
     "correctAnswer": "1"
   },
   {
     "id": "007",
     "type": "multiple-choice",
-    "text": "將柴油以霧狀噴入汽缸的是:",
+    "text": "將柴油以霧狀噴入汽缸的是",
     "options": {
-      "1": "化油器。",
-      "2": "噴油嘴。",
-      "3": "供油泵。"
+      "1": "化油器",
+      "2": "噴油嘴",
+      "3": "供油 泵"
     },
     "correctAnswer": "2"
   },
   {
     "id": "008",
     "type": "multiple-choice",
-    "text": "柴油車行駛時冒黑煙,其可能原因:",
+    "text": "柴油車行駛時冒黑煙，其可能原因",
     "options": {
-      "1": "燃燒機油。",
-      "2": "噴油嘴不良。",
-      "3": "燃料系統有空氣。"
+      "1": "燃燒機油",
+      "2": "噴油嘴不良",
+      "3": "燃料系統有空氣"
     },
     "correctAnswer": "2"
   },
   {
     "id": "009",
     "type": "multiple-choice",
-    "text": "柴油車行駛中遇油箱燃油用盡缺油:",
+    "text": "柴油車行駛中遇油箱燃油用盡缺油",
     "options": {
-      "1": "將燃油加入即可。",
-      "2": "燃油加入油箱後,需再排除供油系統中的空氣。",
-      "3": "以上皆可。"
+      "1": "將燃油加入即可",
+      "2": "燃油加 入油箱後，需再排除供油系統中的空氣",
+      "3": "以上皆可"
     },
     "correctAnswer": "2"
   },
   {
     "id": "010",
     "type": "multiple-choice",
-    "text": "柴油引擎之壓縮比及燃燒壓力較汽油引擎:",
+    "text": "柴油引擎之壓縮比及燃燒壓力較汽油引擎",
     "options": {
-      "1": "高。",
-      "2": "低。",
-      "3": "一樣。"
+      "1": "高",
+      "2": "低",
+      "3": "一 樣"
     },
     "correctAnswer": "1"
   },
   {
     "id": "011",
     "type": "multiple-choice",
-    "text": "同等級柴油引擎之震動及噪音較汽油引擎為:",
+    "text": "同等級柴油引擎之震動及噪音較汽油引擎為",
     "options": {
-      "1": "大。",
-      "2": "小。",
-      "3": "一樣。"
+      "1": "大",
+      "2": "小",
+      "3": "一樣"
     },
     "correctAnswer": "1"
   },
   {
     "id": "012",
     "type": "multiple-choice",
-    "text": "輪胎氣壓不足時,易造成:",
+    "text": "輪胎氣壓不足時，易造成",
     "options": {
-      "1": "輪胎兩側磨損。",
-      "2": "輪胎中央磨損。",
-      "3": "無任何影響。"
+      "1": "輪胎兩側磨損",
+      "2": "輪胎中央磨損",
+      "3": "無任何影響"
     },
     "correctAnswer": "1"
   },
   {
     "id": "013",
     "type": "multiple-choice",
-    "text": "汽車左右輪胎磨耗不均可能是:",
+    "text": "汽車左右輪胎磨耗不均可能是",
     "options": {
-      "1": "煞車不良。",
-      "2": "引擎不順。",
-      "3": "汽車定位失常。"
+      "1": "煞車不良",
+      "2": "引擎不順",
+      "3": "汽車定位失常"
     },
     "correctAnswer": "3"
   },
   {
     "id": "014",
     "type": "multiple-choice",
-    "text": "拆輪胎螺帽需用:",
+    "text": "拆輪胎螺帽需用",
     "options": {
-      "1": "開口扳手。",
-      "2": "套筒扳手。",
+      "1": "開口扳手",
+      "2": "套筒扳手",
       "3": "螺絲起子"
     },
     "correctAnswer": "2"
@@ -156,87 +156,2468 @@
   {
     "id": "015",
     "type": "multiple-choice",
-    "text": "可傾斜式駕駛室之大型車,在其放下駕駛室時:",
+    "text": "可傾斜式駕駛室之大型車，在其放下駕駛室時",
     "options": {
-      "1": "蜂鳴器停止即可。",
-      "2": "蜂鳴器停止,且需完全降到定位。",
-      "3": "放到定位,安全鉤掛上才算完成。"
+      "1": "蜂鳴器停止即可",
+      "2": "蜂鳴器停止，且需完全降到定位",
+      "3": "放到定位，安全鉤掛上才 算完成"
     },
     "correctAnswer": "3"
   },
   {
+    "id": "016",
+    "type": "multiple-choice",
+    "text": "大型車裝有排氣煞車使用於",
+    "options": {
+      "1": "加速時",
+      "2": "減速時",
+      "3": "定速 時"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "017",
+    "type": "multiple-choice",
+    "text": "煞車來令片磨損，則煞車踏板空檔會",
+    "options": {
+      "1": "變大",
+      "2": "變小",
+      "3": "不 變"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "018",
+    "type": "multiple-choice",
+    "text": "雙迴路煞車系統，如有一分缸漏油，則煞車",
+    "options": {
+      "1": "另外三個車輪仍有煞 車",
+      "2": "完全沒有煞車",
+      "3": "另一組車輪仍有煞車"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "019",
+    "type": "multiple-choice",
+    "text": "大型車的手煞車，通常是煞住",
+    "options": {
+      "1": "傳動軸及後輪",
+      "2": "曲軸",
+      "3": "前輪"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "020",
+    "type": "multiple-choice",
+    "text": "如果有一個輪子煞車咬死，它可能的故障是在",
+    "options": {
+      "1": "真空動力缸",
+      "2": "煞車總缸",
+      "3": "該輪分缸或煞車機構"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "021",
+    "type": "multiple-choice",
+    "text": "踩下煞車踏板時，煞車踏板感到軟軟的是因為",
+    "options": {
+      "1": "油管阻塞",
+      "2": "漏 油或煞車油管內有空氣",
+      "3": "煞車來令片上有機油"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "022",
+    "type": "multiple-choice",
+    "text": "放鬆手煞車應該在",
+    "options": {
+      "1": "發動引擎前",
+      "2": "發動引擎後換檔前",
+      "3": "入檔後起步前"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "023",
+    "type": "multiple-choice",
+    "text": "為維護氣壓煞車系統之正常功能，貯氣箱",
+    "options": {
+      "1": "每天行駛後至少需排水 一次",
+      "2": "一週排水一次",
+      "3": "定期保養時排水"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "024",
+    "type": "multiple-choice",
+    "text": "過度使用煞車會造成",
+    "options": {
+      "1": "來令片及煞車鼓過熱煞車效果會降低",
+      "2": "只有來令片會過熱，但不影響煞車效果",
+      "3": "不會影響煞車效 果"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "025",
+    "type": "multiple-choice",
+    "text": "汽車下陡坡或下長坡路段時，如何防止煞車效能減低",
+    "options": {
+      "1": "踩煞車踏板 即可",
+      "2": "踩煞車踏板及配合引擎煞車",
+      "3": "踩煞車踏板，並有效地使 用引擎煞車或排氣煞車"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "026",
+    "type": "multiple-choice",
+    "text": "壓縮空氣輔助煞車，通常用於",
+    "options": {
+      "1": "小型車",
+      "2": "大型車",
+      "3": "大、 小型車都有"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "027",
+    "type": "multiple-choice",
+    "text": "離合器踏板空檔過大則",
+    "options": {
+      "1": "換檔困難",
+      "2": "引擎輸出馬力降低",
+      "3": "離合器打滑"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "028",
+    "type": "multiple-choice",
+    "text": "離合器放鬆不完全時",
+    "options": {
+      "1": "過度磨損離合器片",
+      "2": "容易換檔",
+      "3": "輪胎容易磨損"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "029",
+    "type": "multiple-choice",
+    "text": "後輪雙胎併裝時，其輪胎氣壓之誤差不得超過",
+    "options": {
+      "1": "５％",
+      "2": "１ ５％",
+      "3": "２５％，否則容易引起爆胎"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "030",
+    "type": "multiple-choice",
+    "text": "動力轉向機使用之油料為",
+    "options": {
+      "1": "引擎機油",
+      "2": "變速箱齒輪油",
+      "3": "特定專用之油料"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "031",
+    "type": "multiple-choice",
+    "text": "自排車停駐時，排檔桿應置於",
+    "options": {
+      "1": "Ｐ檔",
+      "2": "Ｒ檔",
+      "3": "Ｎ檔，並 同時使用手煞車"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "032",
+    "type": "multiple-choice",
+    "text": "引擎正常工作溫度應",
+    "options": {
+      "1": "冬天較高",
+      "2": "夏天較低",
+      "3": "保持一定 範圍內之溫度"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "033",
+    "type": "multiple-choice",
+    "text": "汽油引擎排氣顏色呈黑色，其可能原因為",
+    "options": {
+      "1": "化油器不良",
+      "2": "機油 添加過多",
+      "3": "汽門燒毀"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "034",
+    "type": "multiple-choice",
+    "text": "引擎過熱其可能原因為",
+    "options": {
+      "1": "活塞環斷裂",
+      "2": "電動風扇不轉",
+      "3": "冷氣不作用"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "035",
+    "type": "multiple-choice",
+    "text": "裝用三元觸媒轉換器之汽車，需使用",
+    "options": {
+      "1": "低鉛汽油",
+      "2": "無鉛汽油",
+      "3": "高級汽油"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "036",
+    "type": "multiple-choice",
+    "text": "液化石油氣引擎之點火燃燒是靠",
+    "options": {
+      "1": "火星塞點火",
+      "2": "預熱塞加熱",
+      "3": "高壓高溫自燃著火"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "037",
+    "type": "multiple-choice",
+    "text": "電腦控制汽油噴射引擎與化油器汽油引擎比較，其主要優點為",
+    "options": {
+      "1": "排 氣污染降低並節省燃料",
+      "2": "汽缸壓縮比提高",
+      "3": "引擎震動降低"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "038",
+    "type": "multiple-choice",
+    "text": "引擎發動後，再轉動發火開關，則容易損壞",
+    "options": {
+      "1": "起動馬達",
+      "2": "發電 機",
+      "3": "離合器"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "039",
+    "type": "multiple-choice",
+    "text": "四行程引擎油底殼內需加",
+    "options": {
+      "1": "機油與汽油之混合油",
+      "2": "齒輪油",
+      "3": "機油"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "040",
+    "type": "multiple-choice",
+    "text": "四行程汽油引擎正常之排氣顏色為",
+    "options": {
+      "1": "黑色",
+      "2": "藍白色",
+      "3": "無 色"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "041",
+    "type": "multiple-choice",
+    "text": "冷引擎剛發動，不宜猛踩油門踏板，其最主要原因為",
+    "options": {
+      "1": "易熄火，且 浪費燃油",
+      "2": "易縮短引擎使用壽命",
+      "3": "以上皆是"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "042",
+    "type": "multiple-choice",
+    "text": "引擎冷卻系統之節溫器通常裝在",
+    "options": {
+      "1": "水箱內",
+      "2": "引擎出水口處",
+      "3": "引擎水套內"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "043",
+    "type": "multiple-choice",
+    "text": "比較不會產生排氣污染，且噪音較小之汽車為",
+    "options": {
+      "1": "柴油車",
+      "2": "汽油 車",
+      "3": "電動汽車"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "044",
+    "type": "multiple-choice",
+    "text": "往復活塞式引擎中震動及噪音較大者為",
+    "options": {
+      "1": "柴油引擎",
+      "2": "汽油引 擎",
+      "3": "液化石油氣引擎"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "045",
+    "type": "multiple-choice",
+    "text": "汽車引擎於何種轉速的扭力最大及平均耗燃油率最低",
+    "options": {
+      "1": "低轉速",
+      "2": "中轉速",
+      "3": "高轉速"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "046",
+    "type": "multiple-choice",
+    "text": "汽油引擎之熄火方式是",
+    "options": {
+      "1": "切斷燃油",
+      "2": "使火星塞不點火",
+      "3": "降低汽缸壓力"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "047",
+    "type": "multiple-choice",
+    "text": "油量正常時，汽油引擎無法發動應先檢查下列那一項",
+    "options": {
+      "1": "火星塞是否 點火",
+      "2": "汽缸壓力",
+      "3": "汽門腳間隙"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "048",
+    "type": "multiple-choice",
+    "text": "在室內發動引擎時，最需注意的是那一項",
+    "options": {
+      "1": "車庫通風是否良好",
+      "2": "汽門腳有無噪音",
+      "3": "活塞有無異音"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "049",
+    "type": "multiple-choice",
+    "text": "排氣渦輪增壓器使用時之優點有",
+    "options": {
+      "1": "改善引擎怠速之性能",
+      "2": "提升 引擎馬力輸出或提高燃油效率",
+      "3": "提升引擎定速之性能"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "050",
+    "type": "multiple-choice",
+    "text": "引擎之故障燈亮，但是引擎還會發動，其對策為",
+    "options": {
+      "1": "立即停止使用， 等待救援",
+      "2": "只要引擎能動就無大礙",
+      "3": "尚可行駛，但需儘速送廠 檢修"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "051",
+    "type": "multiple-choice",
+    "text": "液化石油氣引擎之優點為",
+    "options": {
+      "1": "可獲得較低之排氣污染",
+      "2": "引擎內部 機件免用機油潤滑",
+      "3": "不會造成噪音"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "052",
+    "type": "multiple-choice",
+    "text": "駕駛液化石油氣汽車，當聞到瓦斯味道時，其正確的處理方法是",
+    "options": {
+      "1": "將汽車停駛",
+      "2": "關掉引擎，打開引擎蓋及後行李箱蓋",
+      "3": "以上皆 是"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "053",
+    "type": "multiple-choice",
+    "text": "使用液化石油氣汽車的燃料鋼瓶要充填",
+    "options": {
+      "1": "液化石油氣",
+      "2": "汽油",
+      "3": "柴油"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "054",
+    "type": "multiple-choice",
+    "text": "使用手動阻風門之汽油引擎，在引擎低溫時，正確的起動方法",
+    "options": {
+      "1": "拉 阻風門",
+      "2": "直接轉動起動馬達",
+      "3": "連續踩放油門踏板數次"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "055",
+    "type": "multiple-choice",
+    "text": "汽車行駛中引擎溫度較正常工作溫度為低會造成",
+    "options": {
+      "1": "冷卻系統容易損 壞",
+      "2": "較耗油",
+      "3": "化油器易阻塞"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "056",
+    "type": "multiple-choice",
+    "text": "發動汽油噴射引擎的正確方法為",
+    "options": {
+      "1": "連續踩放油門踏板數次",
+      "2": "可 直接起動引擎",
+      "3": "操作阻風機構"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "057",
+    "type": "multiple-choice",
+    "text": "冷卻系統副水箱液面太高，其可能故障為",
+    "options": {
+      "1": "水箱漏水",
+      "2": "壓力式 水箱蓋不良",
+      "3": "節溫器未裝"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "058",
+    "type": "multiple-choice",
+    "text": "引擎高溫時旋開水箱蓋會造成",
+    "options": {
+      "1": "高溫水氣噴出而傷人",
+      "2": "節溫器 損壞",
+      "3": "水箱破裂"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "059",
+    "type": "multiple-choice",
+    "text": "空氣濾清器的功用是",
+    "options": {
+      "1": "防止灰塵侵入汽缸",
+      "2": "防止回火傳到外面 造成危險",
+      "3": "以上均是"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "060",
+    "type": "multiple-choice",
+    "text": "引擎低轉速時，機油壓力警告燈閃亮，可能之故障為",
+    "options": {
+      "1": "機油量太 多",
+      "2": "引擎內部各軸承機件磨損過多",
+      "3": "活塞油環斷裂"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "061",
+    "type": "multiple-choice",
+    "text": "氣冷式引擎的缺點為",
+    "options": {
+      "1": "故障多",
+      "2": "構造複雜",
+      "3": "噪音大冷卻 效果較不穩定"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "062",
+    "type": "multiple-choice",
+    "text": "引擎冷卻水，何者為最佳",
+    "options": {
+      "1": "軟水",
+      "2": "硬水",
+      "3": "含礦物質較高 的水"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "063",
+    "type": "multiple-choice",
+    "text": "引擎過熱而發電機又不發電，可能是",
+    "options": {
+      "1": "冷卻水不足",
+      "2": "風扇皮帶 太鬆或折斷",
+      "3": "活塞環卡住"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "064",
+    "type": "multiple-choice",
+    "text": "冷卻水含有很多乳白狀機油，可能是",
+    "options": {
+      "1": "機油濾清器不良",
+      "2": "汽缸 墊床不良",
+      "3": "節溫器不良"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "065",
+    "type": "multiple-choice",
+    "text": "引擎發動很久無法到正常工作溫度，可能是",
+    "options": {
+      "1": "節溫器損壞或未裝",
+      "2": "機油添加過多",
+      "3": "排氣管阻塞"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "066",
+    "type": "multiple-choice",
+    "text": "經常踩著離合器踏板，最容易磨損那一機件",
+    "options": {
+      "1": "離合器軸",
+      "2": "離合 器片",
+      "3": "離合器釋放撥叉"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "067",
+    "type": "multiple-choice",
+    "text": "離合器片磨損，則踏板空檔間隙",
+    "options": {
+      "1": "增大",
+      "2": "減小",
+      "3": "不變"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "068",
+    "type": "multiple-choice",
+    "text": "踩煞車時車頭向右或向左偏是因為",
+    "options": {
+      "1": "煞車油太多",
+      "2": "兩前輪內必 有一輪煞車失常",
+      "3": "煞車管路內有空氣"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "069",
+    "type": "multiple-choice",
+    "text": "煞車踏板沒有空檔間隙，會造成",
+    "options": {
+      "1": "煞車力量小",
+      "2": "煞車力量過 強",
+      "3": "煞車咬住不能放鬆"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "070",
+    "type": "multiple-choice",
+    "text": "前置引擎後輪傳動汽車之離合器裝置在",
+    "options": {
+      "1": "變速箱前",
+      "2": "變速箱 後",
+      "3": "變速箱內"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "071",
+    "type": "multiple-choice",
+    "text": "輪胎動平衡不良，汽車高速行駛會",
+    "options": {
+      "1": "煞車失靈",
+      "2": "方向盤震動",
+      "3": "方向盤無法操作"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "072",
+    "type": "multiple-choice",
+    "text": "放開煞車時，未見踏板回升，其可能之原因為",
+    "options": {
+      "1": "踏板回拉彈簧失 效",
+      "2": "連接組鬆動",
+      "3": "煞車蹄片彈簧失效"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "073",
+    "type": "multiple-choice",
+    "text": "汽車轉彎時，使驅動輪產生不同轉速的是",
+    "options": {
+      "1": "差速器",
+      "2": "變速箱",
+      "3": "離合器"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "074",
+    "type": "multiple-choice",
+    "text": "顯示壓縮空氣壓力的是",
+    "options": {
+      "1": "油壓錶",
+      "2": "氣壓錶",
+      "3": "溫度錶"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "075",
+    "type": "multiple-choice",
+    "text": "自排車要發動引擎時，應將排檔桿放在",
+    "options": {
+      "1": "Ｐ或Ｒ",
+      "2": "Ｎ或Ｄ",
+      "3": "Ｐ或Ｎ之位置上"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "076",
+    "type": "multiple-choice",
+    "text": "汽車行駛時偏向一邊，其可能原因",
+    "options": {
+      "1": "輪胎氣壓不均",
+      "2": "避震器太 弱",
+      "3": "方向盤自由間隙太大"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "077",
+    "type": "multiple-choice",
+    "text": "汽車正常使用，其時間愈長則離合器踏板空檔間隙",
+    "options": {
+      "1": "變大",
+      "2": "變 小",
+      "3": "不變"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "078",
+    "type": "multiple-choice",
+    "text": "液壓操作離合器所使用的液壓油為",
+    "options": {
+      "1": "煞車油",
+      "2": "機油",
+      "3": "齒 輪油"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "079",
+    "type": "multiple-choice",
+    "text": "輪胎構造中，那一部份強度最弱",
+    "options": {
+      "1": "胎面",
+      "3": "胎唇"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "080",
+    "type": "multiple-choice",
+    "text": "汽車使用時間愈長，則煞車踏板空檔間隙",
+    "options": {
+      "1": "變大",
+      "2": "變小",
+      "3": "不變"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "081",
+    "type": "multiple-choice",
+    "text": "輪胎氣壓不平均時，易造成",
+    "options": {
+      "1": "引擎爆震",
+      "2": "煞車偏向",
+      "3": "不 影響"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "082",
+    "type": "multiple-choice",
+    "text": "輪胎氣壓過高時，易造成",
+    "options": {
+      "1": "耗油",
+      "2": "轉向吃重",
+      "3": "輪胎中央 快速磨損"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "083",
+    "type": "multiple-choice",
+    "text": "影響輪胎壽命最大因素為",
+    "options": {
+      "1": "車速",
+      "2": "氣溫",
+      "3": "載重"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "084",
+    "type": "multiple-choice",
+    "text": "離合器片磨損時，有何種現象",
+    "options": {
+      "1": "引擎轉速上升但車速仍未見增加",
+      "2": "變速箱會跳檔",
+      "3": "轉向困難"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "085",
+    "type": "multiple-choice",
+    "text": "輪胎標示１５５Ｓ Ｒ１３則１５５係表示",
+    "options": {
+      "1": "輪胎胎面寬１５５ｍ ｍ",
+      "2": "輪胎斷面高１５５ｍｍ",
+      "3": "鋼圈內徑１５５ｍｍ"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "086",
+    "type": "multiple-choice",
+    "text": "變速箱齒輪油過多會造成",
+    "options": {
+      "1": "消耗動力及過熱",
+      "2": "變速箱無法換 檔",
+      "3": "變速箱易跳檔"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "087",
+    "type": "multiple-choice",
+    "text": "更換引擎機油及變速箱齒輪油應於",
+    "options": {
+      "1": "未發動冷卻時",
+      "2": "行駛後油 溫昇高時",
+      "3": "冷熱無關"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "088",
+    "type": "multiple-choice",
+    "text": "輪胎規格標示在輪胎之",
+    "options": {
+      "1": "胎面",
+      "3": "胎唇"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "089",
+    "type": "multiple-choice",
+    "text": "自動變速箱汽車的缺點是",
+    "options": {
+      "1": "不必操作離合器可換檔",
+      "2": "起步時不 會熄火",
+      "3": "引擎煞車效果較差"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "090",
+    "type": "multiple-choice",
+    "text": "自動排檔車拖吊時，若無法使驅動輪懸空，則必須遵照",
+    "options": {
+      "1": "低速，短 距離",
+      "2": "低速，長距離",
+      "3": "高速，短距離之原則，以避免自動變速 箱損壞"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "091",
+    "type": "multiple-choice",
+    "text": "自動變速箱油（ＡＴＦ）的顏色為",
+    "options": {
+      "1": "透明的褐色",
+      "2": "透明的紅 色",
+      "3": "不透明黑色"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "092",
+    "type": "multiple-choice",
+    "text": "前輪驅動汽車之差速器裝在",
+    "options": {
+      "1": "離合器的後面",
+      "2": "傳動軸的後面",
+      "3": "變速箱內"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "093",
+    "type": "multiple-choice",
+    "text": "後軸總成之主要功用",
+    "options": {
+      "1": "作最後的減速",
+      "2": "汽車轉彎時，使左右兩 輪轉速不同",
+      "3": "以上兩者皆是"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "094",
+    "type": "multiple-choice",
+    "text": "有ＡＢＳ煞車系統之汽車，當[ＡＢＳ]之警示燈亮時",
+    "options": {
+      "1": "全車的煞車 完全失效",
+      "2": "煞車功能大受影響，宜儘速送廠檢修",
+      "3": "與煞車系統 無關"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "095",
+    "type": "multiple-choice",
+    "text": "煞車來令片上如沾有油脂或油類，則煞車時會產生",
+    "options": {
+      "1": "煞車震動",
+      "2": "煞車異音",
+      "3": "該輪煞車失效"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "096",
+    "type": "multiple-choice",
+    "text": "輪胎沾有油脂應該",
+    "options": {
+      "1": "用清水洗",
+      "2": "用汽油清洗",
+      "3": "用柴油擦 拭"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "097",
+    "type": "multiple-choice",
+    "text": "檢查電瓶液不足時，應加入",
+    "options": {
+      "1": "蒸餾水",
+      "2": "任何地方之河井水",
+      "3": "一般用戶之自來水"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "098",
+    "type": "multiple-choice",
+    "text": "電瓶電極裝錯，易使",
+    "options": {
+      "1": "直流發電機整流子燒毀",
+      "2": "交流發電機整 流粒燒毀",
+      "3": "無影響"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "099",
+    "type": "multiple-choice",
+    "text": "電瓶椿頭塗上何物，可以防止腐蝕，並使導電良好",
+    "options": {
+      "1": "油漆",
+      "2": "黃 油",
+      "3": "柏油"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "100",
+    "type": "multiple-choice",
+    "text": "汽車欲停用數月以上，應該",
+    "options": {
+      "1": "將電水倒盡",
+      "2": "將電耗盡",
+      "3": "將電瓶充滿電並將電瓶椿頭拆下為宜"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "101",
+    "type": "multiple-choice",
+    "text": "發電機發出的電壓愈高，燈泡愈亮，其使用壽命愈",
+    "options": {
+      "1": "長",
+      "2": "短",
+      "3": "不變"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "102",
+    "type": "multiple-choice",
+    "text": "電瓶液高度須保持",
+    "options": {
+      "1": "低於液面指示線之下線",
+      "2": "與極板同高",
+      "3": "液面指示線間"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "103",
+    "type": "multiple-choice",
+    "text": "起動馬達，消耗電流是由",
+    "options": {
+      "1": "發電機供給",
+      "2": "電瓶供給",
+      "3": "發 電機和電瓶供給"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "104",
+    "type": "multiple-choice",
+    "text": "電瓶液經常溢出於電瓶外，且有氣泡發生，應檢查",
+    "options": {
+      "1": "充電系統",
+      "2": "冷卻系統",
+      "3": "起動系統"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "105",
+    "type": "multiple-choice",
+    "text": "電瓶蓋上的小孔，是用來",
+    "options": {
+      "1": "看電瓶液量多少",
+      "2": "通氣用",
+      "3": "加電瓶液用"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "106",
+    "type": "multiple-choice",
+    "text": "引擎溫度低，溫度錶指針就偏向",
+    "options": {
+      "1": "Ｈ",
+      "2": "中間",
+      "3": "Ｃ"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "107",
+    "type": "multiple-choice",
+    "text": "汽車所使用電瓶之電為",
+    "options": {
+      "1": "直流電",
+      "2": "交流電",
+      "3": "高壓電"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "108",
+    "type": "multiple-choice",
+    "text": "電瓶液之成份是",
+    "options": {
+      "1": "純硫酸",
+      "2": "蒸餾水",
+      "3": "硫酸與蒸餾水之混 合"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "109",
+    "type": "multiple-choice",
+    "text": "定期保養更換火星塞，應",
+    "options": {
+      "1": "只換下故障之火星塞",
+      "2": "只換下與故 障相鄰之兩缸火星塞",
+      "3": "需全部更新為宜"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "110",
+    "type": "multiple-choice",
+    "text": "火星塞跳火間隙",
+    "options": {
+      "1": "愈大愈好",
+      "2": "愈小愈好",
+      "3": "按各廠家規定 之間隙"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "111",
+    "type": "multiple-choice",
+    "text": "冷天發動引擎，電瓶化學作用遲緩，馬達搖轉引擎速度比夏天為",
+    "options": {
+      "1": "慢",
+      "2": "快",
+      "3": "一樣"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "112",
+    "type": "multiple-choice",
+    "text": "當電瓶線之椿頭夾鬆動，仍無法鎖緊時",
+    "options": {
+      "1": "用鎯頭敲緊椿頭端",
+      "2": "用長螺絲釘鎖緊",
+      "3": "更換椿頭夾及電瓶線"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "113",
+    "type": "multiple-choice",
+    "text": "汽車行駛中，駕駛人發現左右方向指示燈閃爍次數不一，可能是",
+    "options": {
+      "1": "燈開關故障",
+      "2": "保險絲斷",
+      "3": "其中一邊方向燈泡燒毀，所造成"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "114",
+    "type": "multiple-choice",
+    "text": "添加電瓶液時，不小心溢出，沾附於車身鈑金上",
+    "options": {
+      "1": "擦拭乾淨",
+      "2": "先用清水沖洗，再以乾布擦拭乾淨",
+      "3": "讓它自然蒸發"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "115",
+    "type": "multiple-choice",
+    "text": "連接火星塞之電線必須",
+    "options": {
+      "1": "耐高電壓",
+      "2": "愈長愈好",
+      "3": "一般銅 線即可"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "116",
+    "type": "multiple-choice",
+    "text": "起動馬達不轉動，可能是",
+    "options": {
+      "1": "分電盤損壞",
+      "2": "風扇皮帶損壞",
+      "3": "電瓶椿頭鬆動"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "117",
+    "type": "multiple-choice",
+    "text": "電瓶液經常不足，是",
+    "options": {
+      "1": "車上電器用品，裝設過多",
+      "2": "充電系統故 障",
+      "3": "以上皆是"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "118",
+    "type": "multiple-choice",
+    "text": "當引擎轉速超過設定之紅色區域時，則",
+    "options": {
+      "1": "引擎易過熱或磨損",
+      "2": "沒有關係",
+      "3": "煞車容易失靈"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "119",
+    "type": "multiple-choice",
+    "text": "拆下保險絲檢查，發現已燒斷時",
+    "options": {
+      "1": "用銅線代替，以免再燒斷",
+      "2": "用鐵絲代替",
+      "3": "更換安培數相同之保險絲並檢查電路"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "120",
+    "type": "multiple-choice",
+    "text": "更換火星塞，應注意",
+    "options": {
+      "1": "更換同一廠牌、型式之火星塞",
+      "2": "更換他 種廠牌型式之火星塞",
+      "3": "更換價格昂貴之火星塞，為宜"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "121",
+    "type": "multiple-choice",
+    "text": "檢查雨刷系統時，應",
+    "options": {
+      "1": "不必噴水，直接刮洗",
+      "2": "先刮洗，再噴 水",
+      "3": "先噴水再刮洗，以免損壞擋風玻璃表面"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "122",
+    "type": "multiple-choice",
+    "text": "檢查電瓶液面高低，並進行補充時",
+    "options": {
+      "1": "只要檢查一孔即可",
+      "2": "只要 檢查二孔即可",
+      "3": "需要每一孔都檢查"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "123",
+    "type": "multiple-choice",
+    "text": "電瓶水不足時應加入",
+    "options": {
+      "1": "稀硫酸",
+      "2": "蒸餾水",
+      "3": "電水"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "124",
+    "type": "multiple-choice",
+    "text": "車上之電器用品，如果加裝過多，與下列何者無關",
+    "options": {
+      "1": "燃料耗費",
+      "2": "電瓶液易失及電線易發熱",
+      "3": "馬力提高"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "125",
+    "type": "multiple-choice",
+    "text": "汽車行駛中，溫度錶指針上升至Ｈ端時，應檢查",
+    "options": {
+      "1": "水箱水量",
+      "2": "機油量多寡",
+      "3": "以上皆是"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "126",
+    "type": "multiple-choice",
+    "text": "夜間駕車，打開大燈，發現左右近光燈同時不亮，首先應檢查",
+    "options": {
+      "1": "電 瓶椿頭",
+      "2": "點火開關",
+      "3": "近光燈之保險絲"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "127",
+    "type": "multiple-choice",
+    "text": "引擎運轉中，若拆離電瓶火線，下列何組件會燒壞",
+    "options": {
+      "1": "電瓶",
+      "2": "使 用中之電器",
+      "3": "發火線圈"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "128",
+    "type": "multiple-choice",
+    "text": "汽油噴射引擎，混合氣之點火燃燒是靠",
+    "options": {
+      "1": "火星塞跳火",
+      "2": "預熱塞 加熱",
+      "3": "高壓高溫自燃。產生動力"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "129",
+    "type": "multiple-choice",
+    "text": "電瓶正負極性裝反，則",
+    "options": {
+      "1": "沒有關係",
+      "2": "電腦及電器易損壞",
+      "3": "保險絲燒斷"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "130",
+    "type": "multiple-choice",
+    "text": "汽車燃油量不足時，燃油錶指針就偏向",
+    "options": {
+      "1": "Ｅ",
+      "2": "Ｆ",
+      "3": "Ｈ"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "131",
+    "type": "multiple-choice",
+    "text": "故障汽車實施供電救援時，使用之跨接導線，應",
+    "options": {
+      "1": "愈細",
+      "2": "愈 粗",
+      "3": "一般銅線。則通電良好"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "132",
+    "type": "multiple-choice",
+    "text": "發電機有噪音，其原因",
+    "options": {
+      "1": "軸承磨損過多，或軸心彎曲",
+      "2": "碳刷彈 簧過強",
+      "3": "碳刷彈簧過弱"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "133",
+    "type": "multiple-choice",
+    "text": "汽車遠光燈照射的明視距離是離車前",
+    "options": {
+      "1": "４０",
+      "2": "６０",
+      "3": "１００公尺遠處能看清行人及障礙物"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "134",
+    "type": "multiple-choice",
+    "text": "汽車近光燈照射的明視距離是離車前",
+    "options": {
+      "1": "４０",
+      "2": "８０",
+      "3": "１００公尺遠處能看清行人及障礙物"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "135",
+    "type": "multiple-choice",
+    "text": "95無鉛汽油與98無鉛汽油，最重要的差異是",
+    "options": {
+      "1": "熱值",
+      "2": "含鉛量",
+      "3": "辛烷值"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "136",
+    "type": "multiple-choice",
+    "text": "汽車用觸媒轉換器其最主要之目的為何",
+    "options": {
+      "1": "降低排氣污染",
+      "2": "降低引擎 排放噪音",
+      "3": "延長引擎使用壽命"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "137",
+    "type": "multiple-choice",
+    "text": "輪胎195SR14表示",
+    "options": {
+      "1": "輪胎直徑為14吋",
+      "2": "鋼圈直徑為14吋",
+      "3": "鋼 圈直徑為14公分"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "138",
+    "type": "multiple-choice",
+    "text": "汽車的煞車儲油壺內之煞車油如長久未換新，若行駛於連續下坡路段時",
+    "options": {
+      "1": "容易造成煞車咬住",
+      "2": "可縮短煞車距離",
+      "3": "煞車時易造成失靈"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "139",
+    "type": "multiple-choice",
+    "text": "引擎發動時將方向盤向左或向右打到底時才會發出噪音，最可能之故障原 因為下列何種皮帶太鬆",
+    "options": {
+      "1": "動力轉向",
+      "2": "冷卻風扇",
+      "3": "發電機"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "140",
+    "type": "multiple-choice",
+    "text": "輪胎上之185/70SR14字樣表示",
+    "options": {
+      "1": "規格尺寸",
+      "2": "適用溫度",
+      "3": "製造日 期"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "141",
+    "type": "multiple-choice",
+    "text": "汽車經常超載，將容易使下列何種機件損壞",
+    "options": {
+      "1": "懸吊彈簧或避震器",
+      "2": "發電機或起動馬達",
+      "3": "輪胎螺帽"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "142",
+    "type": "multiple-choice",
+    "text": "為了省錢把電瓶電容量換小，會有下列何種現象",
+    "options": {
+      "1": "大燈較省電",
+      "2": "引 擎較不易起動",
+      "3": "較耗燃油"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "143",
+    "type": "multiple-choice",
+    "text": "引擎機油長久未定期更換，下列何種零件最易損壞",
+    "options": {
+      "1": "空氣濾清器",
+      "2": "引擎內部機件",
+      "3": "高壓線"
+    },
+    "correctAnswer": "2"
+  },
+  {
     "id": "001",
     "type": "true-false",
-    "text": "柴油引擎,是用火星塞點火的",
-    "correctAnswer": "X",
-    "explanation": "柴油引擎是靠壓縮空氣產生的高溫使燃料著火燃燒，不需要火星塞點火。汽油引擎才使用火星塞點火。"
+    "text": "柴油引擎，是用火星塞點火的。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "002",
+    "type": "true-false",
+    "text": "柴油引擎在進氣行程時，吸入汽缸之氣體為純空氣。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "003",
+    "type": "true-false",
+    "text": "柴油引擎若因缺油不能發動，應拆開柴油噴射泵檢查。",
+    "correctAnswer": "X"
   },
   {
     "id": "004",
     "type": "true-false",
-    "text": "柴油引擎係靠壓縮空氣產生之高溫使燃料著火燃燒",
-    "correctAnswer": "O",
-    "explanation": "柴油引擎的工作原理是將空氣壓縮到極高壓力，產生高溫（約500-700℃），然後噴入柴油，利用高溫自燃。這與汽油引擎用火星塞點火不同。"
+    "text": "柴油引擎係靠壓縮空氣產生之高溫使燃料著火燃燒。",
+    "correctAnswer": "O"
   },
   {
     "id": "005",
     "type": "true-false",
-    "text": "柴油引擎在高轉速時,容易產生爆震",
-    "correctAnswer": "X",
-    "explanation": "柴油引擎由於燃燒特性與汽油引擎不同，較不容易產生爆震現象。爆震主要發生在汽油引擎中，柴油引擎的燃燒是漸進式的，較為平穩。"
+    "text": "柴油引擎在高轉速時，容易產生爆震。",
+    "correctAnswer": "X"
   },
   {
     "id": "006",
     "type": "true-false",
-    "text": "柴油引擎裝設預熱塞之目的,是使汽車行駛中柴油容易著火燃燒",
+    "text": "柴油引擎裝設預熱塞之目的，是使汽車行駛中柴油容易著火燃燒。",
     "correctAnswer": "X"
+  },
+  {
+    "id": "007",
+    "type": "true-false",
+    "text": "為保持柴油引擎燃料系統作用正常，應裝燃油濾清器，濾除燃油中雜質及 水份。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "008",
+    "type": "true-false",
+    "text": "空氣煞車系統管路漏氣，造成氣壓不足時，彈簧煞車會自動煞住，無法行 駛。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "009",
+    "type": "true-false",
+    "text": "柴油引擎在進氣管道裝設進氣加熱器之目的，能使冷引擎容易發動。",
+    "correctAnswer": "O"
   },
   {
     "id": "010",
     "type": "true-false",
-    "text": "柴油引擎冒黑煙,有可能是噴油嘴不良",
+    "text": "柴油引擎冒黑煙，有可能是噴油嘴不良。",
     "correctAnswer": "O"
   },
   {
     "id": "011",
     "type": "true-false",
-    "text": "柴油進入汽缸是靠化油器供應燃料",
+    "text": "柴油進入汽缸是靠化油器供應燃料。",
     "correctAnswer": "X"
   },
   {
     "id": "012",
     "type": "true-false",
-    "text": "柴油引擎發生逆轉時,應使引擎馬上熄火",
+    "text": "柴油引擎發生逆轉時，應使引擎馬上熄火。",
     "correctAnswer": "O"
   },
   {
     "id": "013",
     "type": "true-false",
-    "text": "柴油車超載或急加速行駛,容易產生黑煙。",
+    "text": "柴油車超載或急加速行駛，容易產生黑煙。",
     "correctAnswer": "O"
   },
   {
     "id": "014",
     "type": "true-false",
-    "text": "柴油引擎使用之燃料具有潤滑效果",
+    "text": "柴油引擎使用之燃料具有潤滑效果。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "015",
+    "type": "true-false",
+    "text": "後輪雙胎併裝時，最好使用相同花紋的輪胎，若有新舊兩胎併用時，新胎 應裝在外側。",
     "correctAnswer": "O"
   },
   {
     "id": "016",
     "type": "true-false",
-    "text": "輪胎氣壓的測量調節工作,應在輪胎常溫時進行",
+    "text": "輪胎氣壓的測量調節工作，應在輪胎常溫時進行。",
     "correctAnswer": "O"
   },
   {
     "id": "017",
     "type": "true-false",
-    "text": "輪胎氣壓過高或過低,將會縮短使用壽命,且容易爆裂。",
+    "text": "輪胎氣壓過高或過低，將會縮短使用壽命，且容易爆裂。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "018",
+    "type": "true-false",
+    "text": "輪胎的型式與使用狀況需配合，粗紋輪胎會增加滾動阻力。",
     "correctAnswer": "O"
   },
   {
     "id": "019",
     "type": "true-false",
-    "text": "可傾斜式駕駛室例行的檢查保養,由於工作簡單,只要將駕駛室傾斜到一半,即可進行作業,無須先做好其它安全配合措施。",
+    "text": "可傾斜式駕駛室例行的檢查保養，由於工作簡單，只要將駕駛室傾斜到一 半，即可進行作業，無須先做好其它安全配合措施。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "020",
+    "type": "true-false",
+    "text": "煞車來令片磨損以後，煞車踏皮行程將會增大，可能導致煞車功能減退， 需儘速送廠檢修調整。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "021",
+    "type": "true-false",
+    "text": "柴油車行駛下坡路段時，需配合適當檔位及排氣煞車，以免過度使用煞 車，造成煞車減退。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "022",
+    "type": "true-false",
+    "text": "下坡時利用低速檔及排氣煞車，做引擎煞車減速時，需注意引擎最高轉速 限制。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "023",
+    "type": "true-false",
+    "text": "裝置氣壓煞車系統之汽車，連續踩放煞車踏板．不僅對煞車效果毫無益 處，反而浪費貯氣箱之空氣，減低制動效能。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "024",
+    "type": "true-false",
+    "text": "大型車貯氣箱，應於每天停駛後，需排除內部積水。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "025",
+    "type": "true-false",
+    "text": "發現空氣壓縮機充氣的時間比平時長，只要氣壓足夠可不必理會。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "026",
+    "type": "true-false",
+    "text": "煞車壓力警告燈未熄滅，且蜂鳴器未停止鳴叫，以低速行駛並不會有危 險。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "027",
+    "type": "true-false",
+    "text": "裝置氣壓煞車系統之汽車，如果引擎無法發動，而必須移動車子時，則需 將彈簧煞車室充氣，以放鬆煞車。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "028",
+    "type": "true-false",
+    "text": "煞車時，若車輪鎖死，則煞車效能會增加，但車子會失去方向控制性能。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "029",
+    "type": "true-false",
+    "text": "為節省油料及減少引擎負荷，行駛下坡路段時，可換空檔或踩下離合器踏 板。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "030",
+    "type": "true-false",
+    "text": "前輪校正不準確，除了駕駛困難外，輪胎磨耗也會增加。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "031",
+    "type": "true-false",
+    "text": "自動排檔車故障需拖曳時，必須將差速器端的傳動軸拆下，否則變速箱會 因潤滑不良而受損。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "032",
+    "type": "true-false",
+    "text": "由前進檔換入倒檔，一定要汽車完全停止後再操作。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "033",
+    "type": "true-false",
+    "text": "大型車自動變速箱之使用與小型車相似，需視路況及交通狀況確定速度及 選擇檔位。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "034",
+    "type": "true-false",
+    "text": "大型車自動變速箱與小型車相同，嚴禁空檔滑行，否則會損壞變速箱。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "035",
+    "type": "true-false",
+    "text": "自排車換檔時，某些特定檔位需壓下按鈕，為防止錯誤，平時使用時需養 成不壓按鈕之習慣，在於使用特定檔位時才壓按鈕。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "036",
+    "type": "true-false",
+    "text": "動力轉向系統，若液壓輔助失效，車子仍可行駛，但方向盤將變得沈重。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "037",
+    "type": "true-false",
+    "text": "空氣煞車系統管路漏氣，造成氣壓不足時，彈簧煞車會自動煞住，無法行 駛。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "038",
+    "type": "true-false",
+    "text": "裝有觸媒轉換器的汽車，行駛後不可停放在草地、或易燃物品上，以免發 生火災。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "039",
+    "type": "true-false",
+    "text": "冷卻系統只要副水箱在滿水位，主水箱不必檢查也不會有問題。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "040",
+    "type": "true-false",
+    "text": "引擎冷卻水內含有防凍液或防銹劑，可不必更換。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "041",
+    "type": "true-false",
+    "text": "新車在磨合時期內，要避免高速行駛與緊急煞車。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "042",
+    "type": "true-false",
+    "text": "裝觸媒轉換器的汽車，一定要使用無鉛汽油。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "043",
+    "type": "true-false",
+    "text": "急速踩放油門踏板，會造成耗油與增加排放污染氣體之不良現象。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "044",
+    "type": "true-false",
+    "text": "使用電動汽油邦浦的汽車油箱缺油時，易使電動汽油邦浦損壞。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "045",
+    "type": "true-false",
+    "text": "排氣渦輪增壓器是以引擎機油來潤滑。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "046",
+    "type": "true-false",
+    "text": "汽油噴射系統汽車，其空氣吸入口較低，涉水深度不可超過車輪的一半。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "047",
+    "type": "true-false",
+    "text": "引擎狀況良好，燃料濾清器仍需定期更換。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "048",
+    "type": "true-false",
+    "text": "裝觸媒轉換器之汽油車，可以添加高級汽油。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "049",
+    "type": "true-false",
+    "text": "正時皮帶需定期更換，否則斷裂時，會嚴重損壞引擎。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "050",
+    "type": "true-false",
+    "text": "機油濾清器，需按照汽車使用手冊規定，定期更換。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "051",
+    "type": "true-false",
+    "text": "檢查引擎機油時，車子要停在平坦地面，且在引擎運轉中檢查。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "052",
+    "type": "true-false",
+    "text": "汽車行駛於積水路面時不可勉強行駛，否則會造成引擎嚴重損壞。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "053",
+    "type": "true-false",
+    "text": "引擎運轉中冷卻系統副水箱之液面愈來愈低，表示正常現象。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "054",
+    "type": "true-false",
+    "text": "汽車引擎冷卻系統裝有節溫器，可縮短引擎溫熱時間。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "055",
+    "type": "true-false",
+    "text": "發現引擎過熱時應立即停車，但在高溫狀態下不可旋開水箱蓋以免燙傷。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "056",
+    "type": "true-false",
+    "text": "引擎機油如變為乳白狀現象，表示冷卻水已混入機油，需送廠檢修。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "057",
+    "type": "true-false",
+    "text": "為提升引擎動力，可拆下消音器。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "058",
+    "type": "true-false",
+    "text": "拆下引擎冷卻系統之節溫器，可節省燃料消耗。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "059",
+    "type": "true-false",
+    "text": "空氣濾清器太髒未更換，會造成耗油及降低馬力等現象。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "060",
+    "type": "true-false",
+    "text": "引擎低溫發動時，排氣管會滴水是正常現象。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "061",
+    "type": "true-false",
+    "text": "拆下引擎冷卻系統之節溫器並不影響引擎壽命。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "062",
+    "type": "true-false",
+    "text": "引擎機油太多時，會造成火星塞積碳、耗油、馬力降低等不良現象。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "063",
+    "type": "true-false",
+    "text": "汽車行駛速度愈高愈省油，故引擎轉速可以無限制地提升。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "064",
+    "type": "true-false",
+    "text": "汽油車排放黑煙是正常現象。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "065",
+    "type": "true-false",
+    "text": "冷引擎高速運轉會縮短引擎壽命。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "066",
+    "type": "true-false",
+    "text": "引擎在低溫時耗油量比正常溫度時大。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "067",
+    "type": "true-false",
+    "text": "裝用三元觸媒轉換器的目的為降低一氧化碳、碳化氫、氮氧化物之排出 量，以減少空氣污染。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "068",
+    "type": "true-false",
+    "text": "定期更換引擎機油，可延長引擎使用壽命。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "069",
+    "type": "true-false",
+    "text": "水冷式引擎無冷卻水時，不可發動。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "070",
+    "type": "true-false",
+    "text": "汽車耗費燃油之原因，係引擎機件不良所引起，與駕駛行為無關。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "071",
+    "type": "true-false",
+    "text": "只要冷卻水足夠，引擎就不會過熱。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "072",
+    "type": "true-false",
+    "text": "引擎發動時，排放藍白色煙，表示燃燒機油。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "073",
+    "type": "true-false",
+    "text": "煞車時有異音，是煞車系統不正常的現象，應停車檢查。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "074",
+    "type": "true-false",
+    "text": "煞車時有異音，是正常的情況，不必檢修。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "075",
+    "type": "true-false",
+    "text": "手煞車未放鬆，對起步沒有什麼影響。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "076",
+    "type": "true-false",
+    "text": "在停車時拉緊手煞車，可防止車子滑動。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "077",
+    "type": "true-false",
+    "text": "手煞車與腳煞車不能同時併用。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "078",
+    "type": "true-false",
+    "text": "裝置ＡＢＳ煞車系統之汽車當緊急煞車時，行駛方向之操控性較佳。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "079",
+    "type": "true-false",
+    "text": "汽車行駛中，發現前有障礙物，由踩煞車時算起，直到車子完全停止的距 離，叫做反應距離。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "080",
+    "type": "true-false",
+    "text": "踩煞車時發現踏板軟綿綿的，可能煞車油管內有空氣或漏油，應立即停車 檢修，以免發生危險。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "081",
+    "type": "true-false",
+    "text": "踩煞車太猛，輪胎易磨損，且容易翻車。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "082",
+    "type": "true-false",
+    "text": "煞車總泵的油量不足，空氣不會滲入。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "083",
+    "type": "true-false",
+    "text": "煞車總泵的通氣孔，應保持暢通。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "084",
+    "type": "true-false",
+    "text": "煞車踏板已放鬆，煞車仍然咬住，可能為煞車踏板沒有空檔間隙。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "085",
+    "type": "true-false",
+    "text": "輪胎行駛一段時期後，應該按規定調換，以延長輪胎使用壽命。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "086",
+    "type": "true-false",
+    "text": "輪胎上沾有機油、黃油並無害處。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "087",
+    "type": "true-false",
+    "text": "輪胎因長時間行駛而發熱時，應潑冷水冷卻。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "088",
+    "type": "true-false",
+    "text": "輪胎套筒是行車必備的隨車工具。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "089",
+    "type": "true-false",
+    "text": "汽車裝載超重，不影響轉向機構。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "090",
+    "type": "true-false",
+    "text": "汽車在轉彎時，差速器可使內外輪以不同的速度行駛。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "091",
+    "type": "true-false",
+    "text": "手排汽車踩離合器時，引擎與傳動系統分開，引擎力量不會傳到傳動系 統。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "092",
+    "type": "true-false",
+    "text": "車用變速箱，是利用不同大小的齒輪，相互接合來變換行車速度。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "093",
+    "type": "true-false",
+    "text": "變速箱在一檔位置時，車子的速度慢，但是扭力大。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "094",
+    "type": "true-false",
+    "text": "變速箱的外殼要保持清潔，使散熱良好。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "095",
+    "type": "true-false",
+    "text": "方向盤操作變重可能因素為胎壓不足、動力轉向系統故障或驅動皮帶過 鬆。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "096",
+    "type": "true-false",
+    "text": "動力轉向之汽車，引擎熄火後，轉向所需操作力不受影響。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "097",
+    "type": "true-false",
+    "text": "輪胎動平衡不良時，高速行駛方向盤會發生抖動現象。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "098",
+    "type": "true-false",
+    "text": "由前進檔換入倒檔，或由倒檔換入前進檔，不一定要停車後再操作。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "099",
+    "type": "true-false",
+    "text": "輪胎氣壓逾高，與地面摩擦阻力逾大。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "100",
+    "type": "true-false",
+    "text": "標有１５５ＳＲ１２等字樣之輪胎，其中Ｒ是表示此輪胎為輻射層輪胎。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "101",
+    "type": "true-false",
+    "text": "碟式煞車與鼓式煞車，均須調整來令片的間隙。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "102",
+    "type": "true-false",
+    "text": "為了節省煞車油，使用過的煞車油，可再重複使用。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "103",
+    "type": "true-false",
+    "text": "同時混用不同廠牌、規格之煞車油，可以確保煞車系統作用正常。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "104",
+    "type": "true-false",
+    "text": "汽車陷入泥沼中，需以高速檔來使汽車脫離泥沼。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "105",
+    "type": "true-false",
+    "text": "自排車起動引擎時，一定要將排檔桿置於Ｄ檔，才能使起動馬達運轉。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "106",
+    "type": "true-false",
+    "text": "自排汽車起步時，要踩下煞車踏板，才能移動排檔桿，以避免發生暴走危 險。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "107",
+    "type": "true-false",
+    "text": "拖吊汽車時，為避免自動變速箱等傳動機件損壞，應將驅動車輪吊離地 面。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "108",
+    "type": "true-false",
+    "text": "檢查自動變速箱油量時，如發現有燒焦味且顏色變黑色或白色乳狀表示正 常現象。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "109",
+    "type": "true-false",
+    "text": "自動變速箱油（ＡＴＦ）之正常顏色為藍色。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "110",
+    "type": "true-false",
+    "text": "自排車行駛中，若引擎轉速與車速未成一定比率上升，則表示變速箱內部 損壞，需送廠檢修。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "111",
+    "type": "true-false",
+    "text": "自排車下險坡時，需排入較低之檔位。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "112",
+    "type": "true-false",
+    "text": "自排車上陡坡時，排檔桿要置於Ｄ檔。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "113",
+    "type": "true-false",
+    "text": "動力轉向系統漏油時，方向盤就完全無法轉動。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "114",
+    "type": "true-false",
+    "text": "有ＡＢＳ煞車系統的汽車，煞車性能較優，可以不用保持適當的安全距 離。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "115",
+    "type": "true-false",
+    "text": "有ＡＢＳ煞車系統之汽車，行駛中發現儀錶板上[ＡＢＳ]之燈號亮，則表 示ＡＢＳ煞車系統有故障，要進廠檢修。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "116",
+    "type": "true-false",
+    "text": "同軸的車輪可以裝用不同花紋與不同規格之輪胎。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "117",
+    "type": "true-false",
+    "text": "動力轉向系統轉動方向盤時有尖銳異音，其可能故障為驅動皮帶太鬆。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "118",
+    "type": "true-false",
+    "text": "汽車行駛中，經常踩著離合器踏板，易使離合器片磨損。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "119",
+    "type": "true-false",
+    "text": "電瓶放電後，不再充電，則電瓶液比重會升高。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "120",
+    "type": "true-false",
+    "text": "起動引擎時，引擎不能轉動或轉速太慢，可能是電瓶或起動馬達故障。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "121",
+    "type": "true-false",
+    "text": "引擎發動失敗後，不必等到引擎完全靜止，可再立即運轉起動馬達，比較 容易發動。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "122",
+    "type": "true-false",
+    "text": "保險絲燒斷，可用銅線代替，以免燒斷再換，增添麻煩。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "123",
+    "type": "true-false",
+    "text": "點煙器座不可任意增設，以免危及電路安全。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "124",
+    "type": "true-false",
+    "text": "分電盤之功用，是將高壓電依一定點火順序分送到每一缸火星塞。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "125",
+    "type": "true-false",
+    "text": "汽車上之起動馬達，是用來發電。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "126",
+    "type": "true-false",
+    "text": "火星塞跳火，是利用高壓電。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "127",
+    "type": "true-false",
+    "text": "電瓶液不足，會使得極板暴露，影響電瓶壽命。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "128",
+    "type": "true-false",
+    "text": "電瓶蓋上的通氣孔，是添加電瓶液用，不應該使它阻塞。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "129",
+    "type": "true-false",
+    "text": "流向火星塞之電流，是低壓電流。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "130",
+    "type": "true-false",
+    "text": "關掉發火開關電源，汽油引擎還不能立即熄火，是因為引擎溫度過高所 致。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "131",
+    "type": "true-false",
+    "text": "電瓶椿頭上，應塗上少許黃油，以防止腐蝕。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "132",
+    "type": "true-false",
+    "text": "每次使用起動馬達發動引擎，最多不超過１０－１５秒，否則電瓶與起動 馬達易損壞。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "133",
+    "type": "true-false",
+    "text": "高壓線圈是用來將高壓電變成低壓電。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "134",
+    "type": "true-false",
+    "text": "電瓶液含有硫酸，不可濺到車上或身上。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "135",
+    "type": "true-false",
+    "text": "檢查電瓶液不足時，應添加蒸餾水。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "136",
+    "type": "true-false",
+    "text": "引擎運轉中，已達到工作溫度，電動式冷卻風扇會自動運轉，幫助散熱。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "137",
+    "type": "true-false",
+    "text": "引擎發動後，各部份電器用電，可由發電機發電供給。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "138",
+    "type": "true-false",
+    "text": "引擎發動中，充電指示燈 熄滅，表示電瓶放電。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "139",
+    "type": "true-false",
+    "text": "電瓶電量不足時，如使用另一車電瓶救援，需採＋極接＋極，－極接故障 汽車搭鐵良好處。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "140",
+    "type": "true-false",
+    "text": "一般電瓶之電容量的表示方法是：安培小時。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "141",
+    "type": "true-false",
+    "text": "冷引擎運轉，電動式冷卻風扇，隨著引擎轉動，即開始不停地送風冷卻。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "142",
+    "type": "true-false",
+    "text": "引擎溫度高時，溫度錶指針偏向Ｈ處。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "143",
+    "type": "true-false",
+    "text": "電瓶無電或電力不足，不會影響高壓電。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "144",
+    "type": "true-false",
+    "text": "高壓線破損，造成絕緣不良，產生漏電時，應全部換新。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "145",
+    "type": "true-false",
+    "text": "起動引擎時所用的電源，是發電機供給的。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "146",
+    "type": "true-false",
+    "text": "電瓶液不足，使極板裸露，若繼續使用，不會影響電瓶壽命。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "147",
+    "type": "true-false",
+    "text": "火星塞電極部份，呈現紅棕色表示燃燒作用正常。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "148",
+    "type": "true-false",
+    "text": "車上安裝過多且耗電之電器用品，易使引擎耗費燃料。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "149",
+    "type": "true-false",
+    "text": "換裝電瓶時，若正負極接錯，會導致車上電器用品損壞。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "150",
+    "type": "true-false",
+    "text": "喇叭一直響不停，可把喇叭的保險絲拆下。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "151",
+    "type": "true-false",
+    "text": "自動排檔汽車，當電瓶電力不足以起動引擎時，可以用推車方式使引擎發 動。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "152",
+    "type": "true-false",
+    "text": "引擎起動後，不鬆回起動馬達開關，易使起動馬達損壞。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "153",
+    "type": "true-false",
+    "text": "引擎發動運轉，發電機發電或電瓶充電中，則 指示燈熄滅。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "154",
+    "type": "true-false",
+    "text": "保持適當電瓶液高度，可使電瓶使用壽命增長。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "155",
+    "type": "true-false",
+    "text": "自動排檔汽車，將排檔桿放置於Ｎ或Ｐ檔以外之檔位，仍可起動引擎。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "156",
+    "type": "true-false",
+    "text": "引擎運轉中，電動式冷卻風扇不轉動，可用手撥動。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "157",
+    "type": "true-false",
+    "text": "設有防盜密碼之音響，拆除電瓶線之前，須先得知密碼，否則音響無法作 用。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "158",
+    "type": "true-false",
+    "text": "夜間黑暗處，檢查電瓶液時，可用打火機點火在電瓶附近當作照明工具。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "159",
+    "type": "true-false",
+    "text": "檢查火星塞，發現瓷芯積黑炭，表示高壓電點火微弱，或混合氣過濃。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "160",
+    "type": "true-false",
+    "text": "頭燈燈座經過變動後，頭燈光束需要重新調整校正。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "161",
+    "type": "true-false",
+    "text": "鹵素燈泡，如用手觸摸燈泡會影響散熱縮短其使用壽命。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "162",
+    "type": "true-false",
+    "text": "拆除汽車上的電瓶時，應先拆除電瓶的火線（正極）。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "163",
+    "type": "true-false",
+    "text": "汽車冷氣壓縮機內之冷凍油可以使用一般引擎機油。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "164",
+    "type": "true-false",
+    "text": "4WD代表四輪轉向的意思。",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "165",
+    "type": "true-false",
+    "text": "柴油引擎在重負載加速時，所產生之黑煙最多。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "166",
+    "type": "true-false",
+    "text": "汽車驅動方式，可區分為前輪、後輪和四輪驅動等三種模式。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "167",
+    "type": "true-false",
+    "text": "汽車輪胎調位之主要目的是使輪胎磨損均勻，並增加輪胎使用壽命。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "168",
+    "type": "true-false",
+    "text": "碟式煞車的優點為散熱快，煞車效果好。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "169",
+    "type": "true-false",
+    "text": "引擎發動中的汽車不可拆下電瓶線。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "170",
+    "type": "true-false",
+    "text": "變速箱油油液過多或過少，都可能損害變速箱，油液過多可能會造成機件 運轉阻力過大，或者使得變速箱油起泡變質而致機件不正常磨損。故檢查 變速箱油時，務必量測精確。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "171",
+    "type": "true-false",
+    "text": "定期調整汽車的引擎供油狀況，以提高汽油的使用效率，以及隨時注意空 氣濾清器、火星塞及化油器的清潔，並適時更換。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "172",
+    "type": "true-false",
+    "text": "煞車踏板沒有自由行程時，會導致煞車咬住不能鬆開。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "173",
+    "type": "true-false",
+    "text": "汽車大燈燈座的固定架如發生撞擊變形時，最好將整組固定架更換，重新 將大燈裝回後，還要進行大燈照射角度的調整工作。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "174",
+    "type": "true-false",
+    "text": "大多數自排汽車的自動變速箱油(ATF)之油面高度檢查，要在引擎怠速運 轉狀態下實施。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "175",
+    "type": "true-false",
+    "text": "手自排與自手排汽車之變速箱，內部的構造與零件是完全一樣。",
     "correctAnswer": "X"
   }
 ]

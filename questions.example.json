@@ -1,0 +1,242 @@
+[
+  {
+    "id": "001",
+    "type": "multiple-choice",
+    "text": "柴油引擎燃燒是靠:",
+    "options": {
+      "1": "空氣壓縮後所產生之高溫著火。",
+      "2": "火星塞點火。",
+      "3": "空氣和柴油混合壓縮之高溫著火。"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "002",
+    "type": "multiple-choice",
+    "text": "柴油引擎在壓縮行程是:",
+    "options": {
+      "1": "壓縮純柴油。",
+      "2": "壓縮空氣與柴油的混合氣。",
+      "3": "壓縮純空氣。"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "003",
+    "type": "multiple-choice",
+    "text": "柴油進入汽缸是靠:",
+    "options": {
+      "1": "化油器。",
+      "2": "大氣壓力。",
+      "3": "噴射泵與噴油嘴。"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "004",
+    "type": "multiple-choice",
+    "text": "柴油引擎的水套功能是:",
+    "options": {
+      "1": "潤滑。",
+      "2": "冷卻。",
+      "3": "傳動"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "005",
+    "type": "multiple-choice",
+    "text": "柴油引擎,正常工作溫度為:",
+    "options": {
+      "1": "華氏70度至85度。",
+      "2": "攝氏75度到95度。",
+      "3": "攝氏140度到180度。"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "006",
+    "type": "multiple-choice",
+    "text": "柴油引擎之噴油嘴,噴入汽缸的是:",
+    "options": {
+      "1": "純柴油。",
+      "2": "柴油與空氣的混合汽。",
+      "3": "純空氣。"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "007",
+    "type": "multiple-choice",
+    "text": "將柴油以霧狀噴入汽缸的是:",
+    "options": {
+      "1": "化油器。",
+      "2": "噴油嘴。",
+      "3": "供油泵。"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "008",
+    "type": "multiple-choice",
+    "text": "柴油車行駛時冒黑煙,其可能原因:",
+    "options": {
+      "1": "燃燒機油。",
+      "2": "噴油嘴不良。",
+      "3": "燃料系統有空氣。"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "009",
+    "type": "multiple-choice",
+    "text": "柴油車行駛中遇油箱燃油用盡缺油:",
+    "options": {
+      "1": "將燃油加入即可。",
+      "2": "燃油加入油箱後,需再排除供油系統中的空氣。",
+      "3": "以上皆可。"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "010",
+    "type": "multiple-choice",
+    "text": "柴油引擎之壓縮比及燃燒壓力較汽油引擎:",
+    "options": {
+      "1": "高。",
+      "2": "低。",
+      "3": "一樣。"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "011",
+    "type": "multiple-choice",
+    "text": "同等級柴油引擎之震動及噪音較汽油引擎為:",
+    "options": {
+      "1": "大。",
+      "2": "小。",
+      "3": "一樣。"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "012",
+    "type": "multiple-choice",
+    "text": "輪胎氣壓不足時,易造成:",
+    "options": {
+      "1": "輪胎兩側磨損。",
+      "2": "輪胎中央磨損。",
+      "3": "無任何影響。"
+    },
+    "correctAnswer": "1"
+  },
+  {
+    "id": "013",
+    "type": "multiple-choice",
+    "text": "汽車左右輪胎磨耗不均可能是:",
+    "options": {
+      "1": "煞車不良。",
+      "2": "引擎不順。",
+      "3": "汽車定位失常。"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "014",
+    "type": "multiple-choice",
+    "text": "拆輪胎螺帽需用:",
+    "options": {
+      "1": "開口扳手。",
+      "2": "套筒扳手。",
+      "3": "螺絲起子"
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "id": "015",
+    "type": "multiple-choice",
+    "text": "可傾斜式駕駛室之大型車,在其放下駕駛室時:",
+    "options": {
+      "1": "蜂鳴器停止即可。",
+      "2": "蜂鳴器停止,且需完全降到定位。",
+      "3": "放到定位,安全鉤掛上才算完成。"
+    },
+    "correctAnswer": "3"
+  },
+  {
+    "id": "001",
+    "type": "true-false",
+    "text": "柴油引擎,是用火星塞點火的",
+    "correctAnswer": "X",
+    "explanation": "柴油引擎是靠壓縮空氣產生的高溫使燃料著火燃燒，不需要火星塞點火。汽油引擎才使用火星塞點火。"
+  },
+  {
+    "id": "004",
+    "type": "true-false",
+    "text": "柴油引擎係靠壓縮空氣產生之高溫使燃料著火燃燒",
+    "correctAnswer": "O",
+    "explanation": "柴油引擎的工作原理是將空氣壓縮到極高壓力，產生高溫（約500-700℃），然後噴入柴油，利用高溫自燃。這與汽油引擎用火星塞點火不同。"
+  },
+  {
+    "id": "005",
+    "type": "true-false",
+    "text": "柴油引擎在高轉速時,容易產生爆震",
+    "correctAnswer": "X",
+    "explanation": "柴油引擎由於燃燒特性與汽油引擎不同，較不容易產生爆震現象。爆震主要發生在汽油引擎中，柴油引擎的燃燒是漸進式的，較為平穩。"
+  },
+  {
+    "id": "006",
+    "type": "true-false",
+    "text": "柴油引擎裝設預熱塞之目的,是使汽車行駛中柴油容易著火燃燒",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "010",
+    "type": "true-false",
+    "text": "柴油引擎冒黑煙,有可能是噴油嘴不良",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "011",
+    "type": "true-false",
+    "text": "柴油進入汽缸是靠化油器供應燃料",
+    "correctAnswer": "X"
+  },
+  {
+    "id": "012",
+    "type": "true-false",
+    "text": "柴油引擎發生逆轉時,應使引擎馬上熄火",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "013",
+    "type": "true-false",
+    "text": "柴油車超載或急加速行駛,容易產生黑煙。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "014",
+    "type": "true-false",
+    "text": "柴油引擎使用之燃料具有潤滑效果",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "016",
+    "type": "true-false",
+    "text": "輪胎氣壓的測量調節工作,應在輪胎常溫時進行",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "017",
+    "type": "true-false",
+    "text": "輪胎氣壓過高或過低,將會縮短使用壽命,且容易爆裂。",
+    "correctAnswer": "O"
+  },
+  {
+    "id": "019",
+    "type": "true-false",
+    "text": "可傾斜式駕駛室例行的檢查保養,由於工作簡單,只要將駕駛室傾斜到一半,即可進行作業,無須先做好其它安全配合措施。",
+    "correctAnswer": "X"
+  }
+]
