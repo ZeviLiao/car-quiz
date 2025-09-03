@@ -31,7 +31,12 @@ function loadQuestions(): Question[] {
   try {
     const filePath = path.join(__dirname, 'questions.json');
     const fileContent = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(fileContent);
+    const questions = JSON.parse(fileContent);
+    
+    // 過濾掉爭議題目034 - 確保永不出現
+    const filteredQuestions = questions.filter((q: Question) => q.id !== '034');
+    
+    return filteredQuestions;
   } catch (error) {
     console.error('讀取題目檔案時發生錯誤:', error);
     return [];

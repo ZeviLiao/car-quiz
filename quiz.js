@@ -21,7 +21,10 @@ function loadQuestions() {
     try {
         var filePath = path.join(__dirname, 'questions.json');
         var fileContent = fs.readFileSync(filePath, 'utf-8');
-        return JSON.parse(fileContent);
+        var questions = JSON.parse(fileContent);
+        // 過濾掉爭議題目034 - 確保永不出現
+        var filteredQuestions = questions.filter(function (q) { return q.id !== '034'; });
+        return filteredQuestions;
     }
     catch (error) {
         console.error('讀取題目檔案時發生錯誤:', error);
