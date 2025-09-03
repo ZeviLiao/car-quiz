@@ -1574,7 +1574,8 @@
     "id": "001",
     "type": "true-false",
     "text": "柴油引擎，是用火星塞點火的。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "柴油引擎靠壓縮空氣產生高溫使燃料著火燃燒"
   },
   {
     "id": "002",
@@ -1586,7 +1587,8 @@
     "id": "003",
     "type": "true-false",
     "text": "柴油引擎若因缺油不能發動，應拆開柴油噴射泵檢查。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "應檢查燃料供應系統，不應隨意拆卸精密部件"
   },
   {
     "id": "004",
@@ -1598,13 +1600,15 @@
     "id": "005",
     "type": "true-false",
     "text": "柴油引擎在高轉速時，容易產生爆震。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "柴油引擎較不易產生爆震，汽油引擎才容易在高轉速時爆震"
   },
   {
     "id": "006",
     "type": "true-false",
     "text": "柴油引擎裝設預熱塞之目的，是使汽車行駛中柴油容易著火燃燒。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "預熱塞是為了冷車啟動時提供額外熱源，幫助冷引擎發動"
   },
   {
     "id": "007",
@@ -1634,7 +1638,8 @@
     "id": "011",
     "type": "true-false",
     "text": "柴油進入汽缸是靠化油器供應燃料。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "柴油進入汽缸是靠噴射泵與噴油嘴"
   },
   {
     "id": "012",
@@ -1682,7 +1687,8 @@
     "id": "019",
     "type": "true-false",
     "text": "可傾斜式駕駛室例行的檢查保養，由於工作簡單，只要將駕駛室傾斜到一 半，即可進行作業，無須先做好其它安全配合措施。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "必須將駕駛室完全傾斜到定位，並確實掛上安全鉤才能進行作業"
   },
   {
     "id": "020",
@@ -1718,13 +1724,15 @@
     "id": "025",
     "type": "true-false",
     "text": "發現空氣壓縮機充氣的時間比平時長，只要氣壓足夠可不必理會。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "充氣時間變長表示系統有問題，需立即檢修"
   },
   {
     "id": "026",
     "type": "true-false",
     "text": "煞車壓力警告燈未熄滅，且蜂鳴器未停止鳴叫，以低速行駛並不會有危 險。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "這是危險警訊，不可繼續行駛"
   },
   {
     "id": "027",
@@ -1736,13 +1744,15 @@
     "id": "028",
     "type": "true-false",
     "text": "煞車時，若車輪鎖死，則煞車效能會增加，但車子會失去方向控制性能。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "車輪鎖死時煞車效能會降低，且車子會失去方向控制性能"
   },
   {
     "id": "029",
     "type": "true-false",
     "text": "為節省油料及減少引擎負荷，行駛下坡路段時，可換空檔或踩下離合器踏 板。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "下坡時應使用適當檔位配合引擎煞車，不可空檔滑行"
   },
   {
     "id": "030",
@@ -1802,13 +1812,15 @@
     "id": "039",
     "type": "true-false",
     "text": "冷卻系統只要副水箱在滿水位，主水箱不必檢查也不會有問題。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "主水箱也需要定期檢查水位和水質"
   },
   {
     "id": "040",
     "type": "true-false",
     "text": "引擎冷卻水內含有防凍液或防銹劑，可不必更換。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "冷卻水需要定期更換，防凍液和防銹劑會隨時間失效"
   },
   {
     "id": "041",
@@ -1856,7 +1868,8 @@
     "id": "048",
     "type": "true-false",
     "text": "裝觸媒轉換器之汽油車，可以添加高級汽油。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "必須使用無鉛汽油"
   },
   {
     "id": "049",
@@ -1874,7 +1887,8 @@
     "id": "051",
     "type": "true-false",
     "text": "檢查引擎機油時，車子要停在平坦地面，且在引擎運轉中檢查。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "應在引擎停止且冷卻後檢查"
   },
   {
     "id": "052",
@@ -1886,7 +1900,8 @@
     "id": "053",
     "type": "true-false",
     "text": "引擎運轉中冷卻系統副水箱之液面愈來愈低，表示正常現象。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "這表示冷卻系統有洩漏，需要檢修"
   },
   {
     "id": "054",
@@ -1910,13 +1925,15 @@
     "id": "057",
     "type": "true-false",
     "text": "為提升引擎動力，可拆下消音器。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "不應拆下消音器，會增加噪音污染"
   },
   {
     "id": "058",
     "type": "true-false",
     "text": "拆下引擎冷卻系統之節溫器，可節省燃料消耗。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "會影響引擎正常工作溫度，不節省燃料"
   },
   {
     "id": "059",
@@ -1934,7 +1951,8 @@
     "id": "061",
     "type": "true-false",
     "text": "拆下引擎冷卻系統之節溫器並不影響引擎壽命。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "會影響引擎壽命"
   },
   {
     "id": "062",
@@ -1946,13 +1964,15 @@
     "id": "063",
     "type": "true-false",
     "text": "汽車行駛速度愈高愈省油，故引擎轉速可以無限制地提升。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "有最佳經濟車速，過高轉速反而耗油"
   },
   {
     "id": "064",
     "type": "true-false",
     "text": "汽油車排放黑煙是正常現象。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "汽油車排放黑煙是異常現象"
   },
   {
     "id": "065",
@@ -1988,13 +2008,15 @@
     "id": "070",
     "type": "true-false",
     "text": "汽車耗費燃油之原因，係引擎機件不良所引起，與駕駛行為無關。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "駕駛行為也會影響油耗"
   },
   {
     "id": "071",
     "type": "true-false",
     "text": "只要冷卻水足夠，引擎就不會過熱。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "還需要冷卻系統其他部件正常工作"
   },
   {
     "id": "072",
@@ -2012,13 +2034,15 @@
     "id": "074",
     "type": "true-false",
     "text": "煞車時有異音，是正常的情況，不必檢修。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "煞車時有異音是煞車系統不正常的現象，應停車檢查"
   },
   {
     "id": "075",
     "type": "true-false",
     "text": "手煞車未放鬆，對起步沒有什麼影響。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "手煞車未放鬆會影響起步並造成煞車片磨損"
   },
   {
     "id": "076",
@@ -2030,7 +2054,8 @@
     "id": "077",
     "type": "true-false",
     "text": "手煞車與腳煞車不能同時併用。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "在某些情況下可以併用，如駐車時"
   },
   {
     "id": "078",
@@ -2042,7 +2067,8 @@
     "id": "079",
     "type": "true-false",
     "text": "汽車行駛中，發現前有障礙物，由踩煞車時算起，直到車子完全停止的距 離，叫做反應距離。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "這是煞車距離，反應距離是指駕駛人發現危險到開始踩煞車的距離"
   },
   {
     "id": "080",
@@ -2060,7 +2086,8 @@
     "id": "082",
     "type": "true-false",
     "text": "煞車總泵的油量不足，空氣不會滲入。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "油量不足時空氣容易滲入系統"
   },
   {
     "id": "083",
@@ -2084,13 +2111,15 @@
     "id": "086",
     "type": "true-false",
     "text": "輪胎上沾有機油、黃油並無害處。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "會影響輪胎性能和安全性"
   },
   {
     "id": "087",
     "type": "true-false",
     "text": "輪胎因長時間行駛而發熱時，應潑冷水冷卻。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "不應用冷水沖洗，會造成輪胎損傷"
   },
   {
     "id": "088",
@@ -2102,7 +2131,8 @@
     "id": "089",
     "type": "true-false",
     "text": "汽車裝載超重，不影響轉向機構。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "會影響轉向機構和其他底盤系統"
   },
   {
     "id": "090",
@@ -2144,7 +2174,8 @@
     "id": "096",
     "type": "true-false",
     "text": "動力轉向之汽車，引擎熄火後，轉向所需操作力不受影響。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "引擎熄火後轉向會變得沉重"
   },
   {
     "id": "097",
@@ -2156,13 +2187,15 @@
     "id": "098",
     "type": "true-false",
     "text": "由前進檔換入倒檔，或由倒檔換入前進檔，不一定要停車後再操作。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "一定要汽車完全停止後再操作"
   },
   {
     "id": "099",
     "type": "true-false",
     "text": "輪胎氣壓逾高，與地面摩擦阻力逾大。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "氣壓過高時與地面接觸面積減小，摩擦阻力較小"
   },
   {
     "id": "100",
@@ -2174,31 +2207,36 @@
     "id": "101",
     "type": "true-false",
     "text": "碟式煞車與鼓式煞車，均須調整來令片的間隙。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "碟式煞車會自動調整間隙"
   },
   {
     "id": "102",
     "type": "true-false",
     "text": "為了節省煞車油，使用過的煞車油，可再重複使用。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "煞車油需定期更換，不可重複使用"
   },
   {
     "id": "103",
     "type": "true-false",
     "text": "同時混用不同廠牌、規格之煞車油，可以確保煞車系統作用正常。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "不可混用不同規格的煞車油"
   },
   {
     "id": "104",
     "type": "true-false",
     "text": "汽車陷入泥沼中，需以高速檔來使汽車脫離泥沼。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "應使用低速檔提供較大扭力"
   },
   {
     "id": "105",
     "type": "true-false",
     "text": "自排車起動引擎時，一定要將排檔桿置於Ｄ檔，才能使起動馬達運轉。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "應置於P檔或N檔"
   },
   {
     "id": "106",
@@ -2216,13 +2254,15 @@
     "id": "108",
     "type": "true-false",
     "text": "檢查自動變速箱油量時，如發現有燒焦味且顏色變黑色或白色乳狀表示正 常現象。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "這是異常現象，需要檢修"
   },
   {
     "id": "109",
     "type": "true-false",
     "text": "自動變速箱油（ＡＴＦ）之正常顏色為藍色。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "正常顏色為透明的紅色"
   },
   {
     "id": "110",
@@ -2240,19 +2280,22 @@
     "id": "112",
     "type": "true-false",
     "text": "自排車上陡坡時，排檔桿要置於Ｄ檔。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "需排入較低檔位"
   },
   {
     "id": "113",
     "type": "true-false",
     "text": "動力轉向系統漏油時，方向盤就完全無法轉動。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "仍可轉動但會變得沉重"
   },
   {
     "id": "114",
     "type": "true-false",
     "text": "有ＡＢＳ煞車系統的汽車，煞車性能較優，可以不用保持適當的安全距 離。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "仍需保持適當安全距離"
   },
   {
     "id": "115",
@@ -2264,7 +2307,8 @@
     "id": "116",
     "type": "true-false",
     "text": "同軸的車輪可以裝用不同花紋與不同規格之輪胎。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "同軸車輪應使用相同規格輪胎"
   },
   {
     "id": "117",
@@ -2282,7 +2326,8 @@
     "id": "119",
     "type": "true-false",
     "text": "電瓶放電後，不再充電，則電瓶液比重會升高。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "電瓶放電後比重會降低"
   },
   {
     "id": "120",
@@ -2294,13 +2339,15 @@
     "id": "121",
     "type": "true-false",
     "text": "引擎發動失敗後，不必等到引擎完全靜止，可再立即運轉起動馬達，比較 容易發動。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "應等引擎完全停止後再啟動"
   },
   {
     "id": "122",
     "type": "true-false",
     "text": "保險絲燒斷，可用銅線代替，以免燒斷再換，增添麻煩。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "需更換安培數相同之保險絲"
   },
   {
     "id": "123",
@@ -2318,7 +2365,8 @@
     "id": "125",
     "type": "true-false",
     "text": "汽車上之起動馬達，是用來發電。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "起動馬達是用來啟動引擎"
   },
   {
     "id": "126",
@@ -2336,13 +2384,15 @@
     "id": "128",
     "type": "true-false",
     "text": "電瓶蓋上的通氣孔，是添加電瓶液用，不應該使它阻塞。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "通氣孔是用來通氣，不是添加電瓶液用"
   },
   {
     "id": "129",
     "type": "true-false",
     "text": "流向火星塞之電流，是低壓電流。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "是高壓電流"
   },
   {
     "id": "130",
@@ -2366,7 +2416,8 @@
     "id": "133",
     "type": "true-false",
     "text": "高壓線圈是用來將高壓電變成低壓電。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "是將低壓電變成高壓電"
   },
   {
     "id": "134",
@@ -2396,7 +2447,8 @@
     "id": "138",
     "type": "true-false",
     "text": "引擎發動中，充電指示燈 熄滅，表示電瓶放電。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "表示發電機正常發電"
   },
   {
     "id": "139",
@@ -2414,7 +2466,8 @@
     "id": "141",
     "type": "true-false",
     "text": "冷引擎運轉，電動式冷卻風扇，隨著引擎轉動，即開始不停地送風冷卻。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "電動風扇由溫度控制，不隨引擎轉動"
   },
   {
     "id": "142",
@@ -2426,7 +2479,8 @@
     "id": "143",
     "type": "true-false",
     "text": "電瓶無電或電力不足，不會影響高壓電。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "會影響高壓電的產生"
   },
   {
     "id": "144",
@@ -2438,13 +2492,15 @@
     "id": "145",
     "type": "true-false",
     "text": "起動引擎時所用的電源，是發電機供給的。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "是電瓶供給的"
   },
   {
     "id": "146",
     "type": "true-false",
     "text": "電瓶液不足，使極板裸露，若繼續使用，不會影響電瓶壽命。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "會嚴重影響電瓶壽命"
   },
   {
     "id": "147",
@@ -2474,7 +2530,8 @@
     "id": "151",
     "type": "true-false",
     "text": "自動排檔汽車，當電瓶電力不足以起動引擎時，可以用推車方式使引擎發 動。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "自排車無法用推車方式發動引擎"
   },
   {
     "id": "152",
@@ -2498,13 +2555,15 @@
     "id": "155",
     "type": "true-false",
     "text": "自動排檔汽車，將排檔桿放置於Ｎ或Ｐ檔以外之檔位，仍可起動引擎。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "只能在P檔或N檔起動引擎"
   },
   {
     "id": "156",
     "type": "true-false",
     "text": "引擎運轉中，電動式冷卻風扇不轉動，可用手撥動。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "不可用手撥動，危險且可能損壞"
   },
   {
     "id": "157",
@@ -2516,7 +2575,8 @@
     "id": "158",
     "type": "true-false",
     "text": "夜間黑暗處，檢查電瓶液時，可用打火機點火在電瓶附近當作照明工具。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "絕對不可使用明火，電瓶會產生易燃氣體"
   },
   {
     "id": "159",
@@ -2540,19 +2600,22 @@
     "id": "162",
     "type": "true-false",
     "text": "拆除汽車上的電瓶時，應先拆除電瓶的火線（正極）。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "應先拆除負極"
   },
   {
     "id": "163",
     "type": "true-false",
     "text": "汽車冷氣壓縮機內之冷凍油可以使用一般引擎機油。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "需使用專用冷凍油"
   },
   {
     "id": "164",
     "type": "true-false",
     "text": "4WD代表四輪轉向的意思。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "4WD代表四輪驅動"
   },
   {
     "id": "165",
@@ -2618,6 +2681,7 @@
     "id": "175",
     "type": "true-false",
     "text": "手自排與自手排汽車之變速箱，內部的構造與零件是完全一樣。",
-    "correctAnswer": "X"
+    "correctAnswer": "X",
+    "explanation": "構造和零件不完全一樣"
   }
 ]

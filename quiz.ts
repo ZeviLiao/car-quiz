@@ -17,10 +17,12 @@ interface Question {
 // Persistent data structure
 interface QuizData {
   failedQuestions: Question[];
+  answeredQuestions: Question[]; // Track correctly answered questions
   lastQuestionCount?: number;
 }
 
 let failedQuestions: Question[] = [];
+let answeredQuestions: Question[] = [];
 let questionCount: number = 20;
 const DATA_FILE = path.join(__dirname, 'quiz-data.json');
 
@@ -46,7 +48,7 @@ function loadQuizData(): QuizData {
   } catch (error) {
     console.error('讀取進度檔案時發生錯誤:', error);
   }
-  return { failedQuestions: [] };
+  return { failedQuestions: [], answeredQuestions: [] };
 }
 
 // Function to save persistent quiz data
@@ -77,6 +79,7 @@ function runQuiz(questions: Question[], requestedCount: number): boolean {
   let correctCount = 0;
   let wrongCount = 0;
   let currentFailedQuestions: Question[] = [];
+  let currentAnsweredQuestions: Question[] = [];
 
   questions = shuffleArray(questions);
   const quizQuestions = questions.slice(0, requestedCount);
@@ -113,25 +116,34 @@ function runQuiz(questions: Question[], requestedCount: number): boolean {
     if (isCorrect) {
       console.log('✔ 答對了！');
       correctCount++;
+      currentAnsweredQuestions.push(q);
     } else {
       console.log(`✘ 答錯了！`);
       console.log(`正確答案是：${q.correctAnswer}。`);
-      
-      // 只有在是非題且正確答案是X時，才顯示說明
-      if (q.type === 'true-false' && q.correctAnswer === 'X' && q.explanation) {
-        console.log(`說明：${q.explanation}`);
-      }
-      
       wrongCount++;
       currentFailedQuestions.push(q);
+    }
+    
+    // 是非題且標準答案是X時，一定顯示說明（不論答對錯）
+    if (q.type === 'true-false' && q.correctAnswer === 'X' && q.explanation) {
+      console.log(`說明：${q.explanation}`);
     }
   }
 
   failedQuestions = currentFailedQuestions;
   
+  // Update answered questions (remove duplicates and add new ones)
+  for (const newAnswered of currentAnsweredQuestions) {
+    const exists = answeredQuestions.some(q => q.id === newAnswered.id);
+    if (!exists) {
+      answeredQuestions.push(newAnswered);
+    }
+  }
+  
   // Save progress
   const quizData: QuizData = {
     failedQuestions: failedQuestions,
+    answeredQuestions: answeredQuestions,
     lastQuestionCount: requestedCount
   };
   saveQuizData(quizData);
@@ -177,40 +189,75 @@ function main(): void {
   // Load previous quiz data
   const savedData = loadQuizData();
   failedQuestions = savedData.failedQuestions || [];
+  answeredQuestions = savedData.answeredQuestions || [];
   questionCount = savedData.lastQuestionCount || 20;
 
   while (true) {
     let questionsToAsk: Question[];
     let currentQuestionCount: number;
     
-    if (failedQuestions.length > 0) {
-      console.log('\n---');
-      console.log(`上次有 ${failedQuestions.length} 題答錯，請選擇：`);
+    // Filter out already answered questions for available pool
+    const unansweredQuestions = allQuestions.filter(q => 
+      !answeredQuestions.some(answered => answered.id === q.id)
+    );
+    
+    // Show progress info
+    const totalQuestions = allQuestions.length;
+    const answeredCount = answeredQuestions.length;
+    const failedCount = failedQuestions.length;
+    const remainingCount = unansweredQuestions.length;
+    
+    console.log('\n=== 測驗進度 ===');
+    console.log(`總題數：${totalQuestions}`);
+    console.log(`已答對：${answeredCount}`);
+    console.log(`答錯待重做：${failedCount}`);
+    console.log(`尚未作答：${remainingCount}`);
+    
+    // Create available question pool (unanswered + failed)
+    const availableQuestions = [...unansweredQuestions, ...failedQuestions];
+    
+    if (availableQuestions.length === 0) {
+      console.log('\n🎉 恭喜！您已完成所有題目！');
+      console.log('選擇 reset 重新開始全部題目');
+    }
+    
+    console.log('\n=== 選單 ===');
+    if (failedCount > 0) {
       console.log('1. 只測驗答錯的題目');
-      console.log('2. 測驗全部題目');
-      console.log('3. 離開');
-      const choice = readlineSync.question('請輸入您的選擇 (1/2/3)：');
-      console.log('---');
+    }
+    if (availableQuestions.length > 0) {
+      console.log('2. 測驗可用題目 (未答過 + 答錯)');
+    }
+    console.log('3. reset 重新開始 (清除所有記錄)');
+    console.log('4. 離開');
+    
+    const choice = readlineSync.question('請輸入您的選擇：');
+    console.log('---');
 
-      if (choice === '1') {
-        questionsToAsk = failedQuestions;
-        currentQuestionCount = getQuestionCount(questionsToAsk.length, Math.min(questionCount, questionsToAsk.length));
-      } else if (choice === '2') {
-        questionsToAsk = allQuestions;
-        currentQuestionCount = getQuestionCount(questionsToAsk.length, questionCount);
-      } else if (choice === '3') {
-        console.log('測驗已結束，謝謝使用。');
-        break;
-      } else {
-        console.log('無效的選擇，將重新開始測驗全部題目。');
-        questionsToAsk = allQuestions;
-        currentQuestionCount = getQuestionCount(questionsToAsk.length, questionCount);
-      }
-    } else {
-      console.log('\n---');
-      console.log('開始進行測驗。');
-      questionsToAsk = allQuestions;
+    if (choice === '1' && failedCount > 0) {
+      questionsToAsk = failedQuestions;
+      currentQuestionCount = getQuestionCount(questionsToAsk.length, Math.min(questionCount, questionsToAsk.length));
+    } else if (choice === '2' && availableQuestions.length > 0) {
+      questionsToAsk = availableQuestions;
       currentQuestionCount = getQuestionCount(questionsToAsk.length, questionCount);
+    } else if (choice === '3') {
+      console.log('重設所有記錄...');
+      failedQuestions = [];
+      answeredQuestions = [];
+      const resetData: QuizData = {
+        failedQuestions: [],
+        answeredQuestions: [],
+        lastQuestionCount: questionCount
+      };
+      saveQuizData(resetData);
+      console.log('已清除所有記錄，可重新開始測驗。');
+      continue;
+    } else if (choice === '4') {
+      console.log('測驗已結束，謝謝使用。');
+      break;
+    } else {
+      console.log('無效的選擇，請重新選擇。');
+      continue;
     }
 
     const quizCompleted = runQuiz(questionsToAsk, currentQuestionCount);

@@ -1,0 +1,192 @@
+"use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g = Object.create((typeof Iterator === "function" ? Iterator : Object).prototype);
+    return g.next = verb(0), g["throw"] = verb(1), g["return"] = verb(2), typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (g && (g = 0, op[0] && (_ = 0)), _) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var fs = require("fs");
+var path = require("path");
+// 錯誤觀念與說明的對應表
+var explanationMap = {
+    // 柴油引擎錯誤觀念
+    '柴油引擎是用火星塞點火': '柴油引擎靠壓縮空氣產生高溫使燃料著火燃燒',
+    '柴油引擎若因缺油不能發動，應拆開柴油噴射泵檢查': '應檢查燃料供應系統，不應隨意拆卸精密部件',
+    '柴油引擎在高轉速時容易產生爆震': '柴油引擎較不易產生爆震，汽油引擎才容易在高轉速時爆震',
+    '柴油引擎裝設預熱塞是為了行駛中柴油容易著火燃燒': '預熱塞是為了冷車啟動時提供額外熱源，幫助冷引擎發動',
+    '柴油進入汽缸是靠化油器供應燃料': '柴油進入汽缸是靠噴射泵與噴油嘴',
+    // 安全作業錯誤觀念
+    '可傾斜式駕駛室檢查保養時，只要將駕駛室傾斜到一半即可進行作業': '必須將駕駛室完全傾斜到定位，並確實掛上安全鉤才能進行作業',
+    // 煞車系統錯誤觀念
+    '發現空氣壓縮機充氣時間比平時長，只要氣壓足夠可不必理會': '充氣時間變長表示系統有問題，需立即檢修',
+    '煞車壓力警告燈未熄滅且蜂鳴器未停止鳴叫，以低速行駛並不會有危險': '這是危險警訊，不可繼續行駛',
+    '煞車時若車輪鎖死，煞車效能會增加': '車輪鎖死時煞車效能會降低，且車子會失去方向控制性能',
+    '為節省油料及減少引擎負荷，行駛下坡路段時可換空檔或踩下離合器踏板': '下坡時應使用適當檔位配合引擎煞車，不可空檔滑行',
+    // 冷卻系統錯誤觀念
+    '冷卻系統只要副水箱在滿水位，主水箱不必檢查': '主水箱也需要定期檢查水位和水質',
+    '引擎冷卻水內含有防凍液或防銹劑，可不必更換': '冷卻水需要定期更換，防凍液和防銹劑會隨時間失效',
+    '引擎運轉中冷卻系統副水箱液面愈來愈低，表示正常現象': '這表示冷卻系統有洩漏，需要檢修',
+    // 煞車系統進階錯誤觀念
+    '煞車時有異音是正常的情況，不必檢修': '煞車時有異音是煞車系統不正常的現象，應停車檢查',
+    '手煞車未放鬆對起步沒有什麼影響': '手煞車未放鬆會影響起步並造成煞車片磨損',
+    '手煞車與腳煞車不能同時併用': '在某些情況下可以併用，如駐車時',
+    '汽車行駛中發現前有障礙物，由踩煞車時算起直到車子完全停止的距離叫做反應距離': '這是煞車距離，反應距離是指駕駛人發現危險到開始踩煞車的距離',
+    '煞車總泵的油量不足，空氣不會滲入': '油量不足時空氣容易滲入系統',
+    // 變速箱系統錯誤觀念
+    '輪胎上沾有機油、黃油並無害處': '會影響輪胎性能和安全性',
+    '輪胎因長時間行駛而發熱時，應潑冷水冷卻': '不應用冷水沖洗，會造成輪胎損傷',
+    '汽車裝載超重不影響轉向機構': '會影響轉向機構和其他底盤系統',
+    '動力轉向之汽車，引擎熄火後轉向所需操作力不受影響': '引擎熄火後轉向會變得沉重',
+    '由前進檔換入倒檔，或由倒檔換入前進檔，不一定要停車後再操作': '一定要汽車完全停止後再操作',
+    '輪胎氣壓逾高，與地面摩擦阻力逾大': '氣壓過高時與地面接觸面積減小，摩擦阻力較小',
+    // 自動變速箱錯誤觀念
+    '大型車自動變速箱與小型車相同，嚴禁空檔滑行，否則會損壞變速箱': '大型車自動變速箱與小型車相似，需視路況及交通狀況確定速度及選擇檔位',
+    '碟式煞車與鼓式煞車，均須調整來令片的間隙': '碟式煞車會自動調整間隙',
+    '為了節省煞車油，使用過的煞車油可再重複使用': '煞車油需定期更換，不可重複使用',
+    '同時混用不同廠牌、規格之煞車油，可以確保煞車系統作用正常': '不可混用不同規格的煞車油',
+    '汽車陷入泥沼中，需以高速檔來使汽車脫離泥沼': '應使用低速檔提供較大扭力',
+    '自排車起動引擎時，一定要將排檔桿置於D檔才能使起動馬達運轉': '應置於P檔或N檔',
+    '檢查自動變速箱油量時，如發現有燒焦味且顏色變黑色或白色乳狀表示正常現象': '這是異常現象，需要檢修',
+    '自動變速箱油（ATF）之正常顏色為藍色': '正常顏色為透明的紅色',
+    '自排車上陡坡時，排檔桿要置於D檔': '需排入較低檔位',
+    '動力轉向系統漏油時，方向盤就完全無法轉動': '仍可轉動但會變得沉重',
+    '有ABS煞車系統的汽車，煞車性能較優，可以不用保持適當的安全距離': '仍需保持適當安全距離',
+    '同軸的車輪可以裝用不同花紋與不同規格之輪胎': '同軸車輪應使用相同規格輪胎',
+    // 電氣系統錯誤觀念
+    '電瓶放電後，不再充電，則電瓶液比重會升高': '電瓶放電後比重會降低',
+    '引擎發動失敗後，不必等到引擎完全靜止，可再立即運轉起動馬達': '應等引擎完全停止後再啟動',
+    '保險絲燒斷，可用銅線代替': '需更換安培數相同之保險絲',
+    '汽車上之起動馬達是用來發電': '起動馬達是用來啟動引擎',
+    '電瓶蓋上的通氣孔是添加電瓶液用，不應該使它阻塞': '通氣孔是用來通氣，不是添加電瓶液用',
+    '流向火星塞之電流是低壓電流': '是高壓電流',
+    '高壓線圈是用來將高壓電變成低壓電': '是將低壓電變成高壓電',
+    '引擎發動中充電指示燈熄滅，表示電瓶放電': '表示發電機正常發電',
+    '冷引擎運轉，電動式冷卻風扇，隨著引擎轉動即開始不停地送風冷卻': '電動風扇由溫度控制，不隨引擎轉動',
+    '電瓶無電或電力不足，不會影響高壓電': '會影響高壓電的產生',
+    '起動引擎時所用的電源是發電機供給的': '是電瓶供給的',
+    '電瓶液不足使極板裸露，若繼續使用不會影響電瓶壽命': '會嚴重影響電瓶壽命',
+    // 汽油引擎系統錯誤觀念
+    '裝觸媒轉換器之汽油車可以添加高級汽油': '必須使用無鉛汽油',
+    '檢查引擎機油時，車子要停在平坦地面且在引擎運轉中檢查': '應在引擎停止且冷卻後檢查',
+    '為提升引擎動力，可拆下消音器': '不應拆下消音器，會增加噪音污染',
+    '拆下引擎冷卻系統之節溫器，可節省燃料消耗': '會影響引擎正常工作溫度，不節省燃料',
+    '拆下引擎冷卻系統之節溫器並不影響引擎壽命': '會影響引擎壽命',
+    '汽車行駛速度愈高愈省油，故引擎轉速可以無限制地提升': '有最佳經濟車速，過高轉速反而耗油',
+    '汽油車排放黑煙是正常現象': '汽油車排放黑煙是異常現象',
+    '汽車耗費燃油之原因係引擎機件不良所引起，與駕駛行為無關': '駕駛行為也會影響油耗',
+    '只要冷卻水足夠，引擎就不會過熱': '還需要冷卻系統其他部件正常工作',
+    // 最後錯誤觀念澄清
+    '自動排檔汽車，當電瓶電力不足以起動引擎時，可以用推車方式使引擎發動': '自排車無法用推車方式發動引擎',
+    '自動排檔汽車將排檔桿放置於N或P檔以外之檔位，仍可起動引擎': '只能在P檔或N檔起動引擎',
+    '引擎運轉中電動式冷卻風扇不轉動，可用手撥動': '不可用手撥動，危險且可能損壞',
+    '夜間黑暗處檢查電瓶液時，可用打火機點火在電瓶附近當作照明工具': '絕對不可使用明火，電瓶會產生易燃氣體',
+    '拆除汽車上的電瓶時，應先拆除電瓶的火線（正極）': '應先拆除負極',
+    '汽車冷氣壓縮機內之冷凍油可以使用一般引擎機油': '需使用專用冷凍油',
+    '4WD代表四輪轉向的意思': '4WD代表四輪驅動',
+    '手自排與自手排汽車之變速箱內部的構造與零件是完全一樣': '構造和零件不完全一樣'
+};
+function matchQuestionWithExplanation(questionText) {
+    // 移除題目編號和多餘空白
+    var cleanText = questionText.replace(/^\d+\s*/, '').trim();
+    // 直接匹配
+    if (explanationMap[cleanText]) {
+        return explanationMap[cleanText];
+    }
+    // 部分匹配 - 尋找最佳匹配
+    var bestMatch = '';
+    var bestScore = 0;
+    for (var key in explanationMap) {
+        // 計算相似度
+        var score = 0;
+        var keyWords = key.split('');
+        var textWords = cleanText.split('');
+        for (var _i = 0, keyWords_1 = keyWords; _i < keyWords_1.length; _i++) {
+            var word = keyWords_1[_i];
+            if (cleanText.includes(word)) {
+                score++;
+            }
+        }
+        var similarity = score / Math.max(key.length, cleanText.length);
+        if (similarity > bestScore && similarity > 0.7) {
+            bestScore = similarity;
+            bestMatch = key;
+        }
+    }
+    return bestMatch ? explanationMap[bestMatch] : undefined;
+}
+function addExplanationsToQuestions() {
+    return __awaiter(this, void 0, void 0, function () {
+        var questionsPath, questionsContent, questions, addedCount_1, xAnswerCount_1;
+        return __generator(this, function (_a) {
+            try {
+                questionsPath = path.join(__dirname, 'questions.json');
+                questionsContent = fs.readFileSync(questionsPath, 'utf-8');
+                questions = JSON.parse(questionsContent);
+                console.log('開始處理題目...');
+                addedCount_1 = 0;
+                xAnswerCount_1 = 0;
+                // 處理每一題
+                questions.forEach(function (question, index) {
+                    if (question.type === 'true-false' && question.correctAnswer === 'X') {
+                        xAnswerCount_1++;
+                        // 嘗試匹配說明
+                        var explanation = matchQuestionWithExplanation(question.text);
+                        if (explanation) {
+                            question.explanation = explanation;
+                            addedCount_1++;
+                            console.log("\u2713 ".concat(question.id, ": \u5DF2\u6DFB\u52A0\u8AAA\u660E"));
+                        }
+                        else {
+                            console.log("\u2717 ".concat(question.id, ": \u7121\u6CD5\u5339\u914D\u8AAA\u660E - ").concat(question.text.substring(0, 50), "..."));
+                        }
+                    }
+                });
+                // 寫入更新後的文件
+                fs.writeFileSync(questionsPath, JSON.stringify(questions, null, 2), 'utf-8');
+                console.log('\n=== 處理完成 ===');
+                console.log("\u7B54\u6848\u70BAX\u7684\u662F\u975E\u984C\u7E3D\u6578: ".concat(xAnswerCount_1));
+                console.log("\u6210\u529F\u6DFB\u52A0\u8AAA\u660E: ".concat(addedCount_1));
+                console.log("\u672A\u5339\u914D\u5230\u8AAA\u660E: ".concat(xAnswerCount_1 - addedCount_1));
+            }
+            catch (error) {
+                console.error('處理過程中發生錯誤:', error);
+            }
+            return [2 /*return*/];
+        });
+    });
+}
+// 執行主函數
+if (require.main === module) {
+    addExplanationsToQuestions();
+}
