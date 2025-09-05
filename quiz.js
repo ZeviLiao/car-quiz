@@ -62,7 +62,14 @@ function loadQuizData() {
     try {
         if (fs.existsSync(DATA_FILE)) {
             const fileContent = fs.readFileSync(DATA_FILE, 'utf-8');
-            return JSON.parse(fileContent);
+            const data = JSON.parse(fileContent);
+            // 向後相容：如果舊檔案沒有 markedQuestions，則添加空陣列
+            return {
+                failedQuestions: data.failedQuestions || [],
+                answeredQuestions: data.answeredQuestions || [],
+                markedQuestions: data.markedQuestions || [], // 向後相容
+                lastQuestionCount: data.lastQuestionCount
+            };
         }
     }
     catch (error) {
@@ -191,8 +198,8 @@ function runQuiz(questions, requestedCount) {
 }
 // Function to get question count from user
 function getQuestionCount(maxQuestions, lastCount) {
-    const minQuestions = Math.min(20, maxQuestions);
-    const defaultCount = lastCount && lastCount >= minQuestions ? lastCount : minQuestions;
+    const minQuestions = Math.min(1, maxQuestions);
+    const defaultCount = lastCount && lastCount >= minQuestions ? lastCount : Math.min(20, maxQuestions);
     console.log(`\n請選擇出題數量 (最少 ${minQuestions} 題，最多 ${maxQuestions} 題)`);
     if (lastCount) {
         console.log(`上次選擇：${lastCount} 題`);

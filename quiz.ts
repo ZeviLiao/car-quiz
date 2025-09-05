@@ -209,8 +209,8 @@ function runQuiz(questions: Question[], requestedCount: number): boolean {
 
 // Function to get question count from user
 function getQuestionCount(maxQuestions: number, lastCount?: number): number {
-  const minQuestions = Math.min(20, maxQuestions);
-  const defaultCount = lastCount && lastCount >= minQuestions ? lastCount : minQuestions;
+  const minQuestions = Math.min(1, maxQuestions);
+  const defaultCount = lastCount && lastCount >= minQuestions ? lastCount : Math.min(20, maxQuestions);
   
   console.log(`\n請選擇出題數量 (最少 ${minQuestions} 題，最多 ${maxQuestions} 題)`);
   if (lastCount) {
