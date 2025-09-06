@@ -46,12 +46,12 @@ interface QuizData {
 let failedQuestions: Question[] = [];
 let answeredQuestions: Question[] = [];
 let markedQuestions: Question[] = [];
-const DATA_FILE = path.join(__dirname, '..', '..', 'data', 'quiz-data.json');
+const DATA_FILE = path.join(__dirname, 'data', 'quiz-data.json');
 
 // Function to load questions from a JSON file
 function loadQuestions(): Question[] {
   try {
-    const filePath = path.join(__dirname, '..', '..', 'data', 'questions.json');
+    const filePath = path.join(__dirname, 'data', 'questions.json');
     const fileContent = fs.readFileSync(filePath, 'utf-8');
     const questions = JSON.parse(fileContent);
     

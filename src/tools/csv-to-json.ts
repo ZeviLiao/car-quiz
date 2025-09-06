@@ -16,7 +16,7 @@ class CsvToJsonConverter {
 
   constructor() {
     this.dataDir = path.join(__dirname, 'src_data');
-    this.outputPath = path.join(__dirname, '..', '..', 'data', 'questions.json');
+    this.outputPath = path.join(__dirname, '..', 'data', 'questions.json');
   }
 
   private parseCsvLine(line: string): string[] {

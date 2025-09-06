@@ -9,8 +9,8 @@ This is a TypeScript-based interactive quiz application for automotive/vehicle m
 ## Architecture
 
 - **Main Application**: `src/quiz.ts` - Complete quiz logic, question management, and user interaction flow
-- **Question Data**: `data/questions.json` - JSON file containing all quiz questions with Traditional Chinese text
-- **Data Processing Pipeline**: `src/tools/pdf-to-csv.ts` → `src/tools/csv-to-json.ts` → `data/questions.json`
+- **Question Data**: `src/data/questions.json` - JSON file containing all quiz questions with Traditional Chinese text
+- **Data Processing Pipeline**: `src/tools/pdf-to-csv.ts` → `src/tools/csv-to-json.ts` → `src/data/questions.json`
 - **Question Interface**: Defined in `src/quiz.ts:28-37` with support for multiple-choice and true-false question types
 
 ## Development Commands
@@ -34,7 +34,7 @@ npx tsc && node dist/src/tools/csv-to-json.js
 - Questions loaded from `questions.json` using `loadQuestions()` function
 - Fisher-Yates shuffling algorithm via `shuffleArray()` for randomization
 - Three-category progress tracking: answered correctly, failed (retry queue), marked (permanently excluded)
-- Real-time progress saving in `data/quiz-data.json` after each question
+- Real-time progress saving in `src/data/quiz-data.json` after each question
 
 ### User Interaction Flow
 - Console-based interface using `readline-sync`
@@ -54,10 +54,11 @@ npx tsc && node dist/src/tools/csv-to-json.js
 
 ## File Structure
 - `src/quiz.ts`: Main application logic
+- `src/data/`: JSON data files directory
+- `src/data/questions.json`: Complete question database (317 questions)
+- `src/data/quiz-data.json`: User progress persistence (answered/failed/marked)
 - `src/tools/`: Data processing utilities directory
 - `src/tools/src_data/`: CSV source files for question data
-- `data/questions.json`: Complete question database (317 questions)
-- `data/quiz-data.json`: User progress persistence (answered/failed/marked)
 - `dist/`: Compiled JavaScript output directory
 
 ## Dependencies

@@ -40,17 +40,22 @@
 
 ## 如何使用
 
-### 1. 編譯程式
+### 1. 建置程式
 ```bash
-npx tsc
+npm run build
 ```
 
 ### 2. 開始測驗
 ```bash
-node dist/src/quiz.js
+npm start
 ```
 
-### 3. 選擇測驗模式
+### 3. 開發模式（建置 + 執行）
+```bash
+npm run dev
+```
+
+### 4. 選擇測驗模式
 程式啟動後會顯示進度資訊和兩階段選單：
 
 **第一步：選擇題型**
@@ -158,6 +163,10 @@ b. 返回題型選擇
 ```
 ├── src/                              # 主程式目錄
 │   ├── quiz.ts                       # 主程式 (測驗邏輯)
+│   ├── data/                         # JSON資料檔案
+│   │   ├── questions.json            # 完整題庫
+│   │   ├── questions.example.json    # 題庫格式範例
+│   │   └── quiz-data.json            # 測驗進度記錄 (答對/答錯/標記)
 │   └── tools/                        # 資料處理工具
 │       ├── pdf-to-csv.ts             # PDF轉CSV工具
 │       ├── pdf-to-csv-multiple-choice.ts # 選擇題PDF處理工具
@@ -168,10 +177,6 @@ b. 返回題型選擇
 │       └── src_data/                 # 原始CSV資料
 │           ├── multiple-choice-questions.csv # 選擇題資料
 │           └── true-false-questions.csv      # 是非題資料
-├── data/                             # JSON資料檔案
-│   ├── questions.json                # 完整題庫
-│   ├── questions.example.json        # 題庫格式範例
-│   └── quiz-data.json                # 測驗進度記錄 (答對/答錯/標記)
 └── dist/                             # 編譯輸出目錄
 ```
 
