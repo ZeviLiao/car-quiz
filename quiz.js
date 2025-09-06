@@ -57,7 +57,6 @@ function yellowText(text) {
 let failedQuestions = [];
 let answeredQuestions = [];
 let markedQuestions = [];
-let questionCount = 20;
 const DATA_FILE = path.join(__dirname, 'quiz-data.json');
 // Function to load questions from a JSON file
 function loadQuestions() {
@@ -65,10 +64,8 @@ function loadQuestions() {
         const filePath = path.join(__dirname, 'questions.json');
         const fileContent = fs.readFileSync(filePath, 'utf-8');
         const questions = JSON.parse(fileContent);
-        // 過濾掉爭議題目034 - 確保永不出現
-        // 同時過濾掉被標記的題目 (markedQuestions)
-        const filteredQuestions = questions.filter((q) => q.id !== '034' && !markedQuestions.some(marked => marked.id === q.id));
-        return filteredQuestions;
+        // 過濾掉爭議題目034和被標記的題目
+        return questions.filter((q) => q.id !== '034' && !markedQuestions.some(marked => marked.id === q.id));
     }
     catch (error) {
         console.error('讀取題目檔案時發生錯誤:', error);
@@ -81,12 +78,10 @@ function loadQuizData() {
         if (fs.existsSync(DATA_FILE)) {
             const fileContent = fs.readFileSync(DATA_FILE, 'utf-8');
             const data = JSON.parse(fileContent);
-            // 向後相容：如果舊檔案沒有 markedQuestions，則添加空陣列
             return {
                 failedQuestions: data.failedQuestions || [],
                 answeredQuestions: data.answeredQuestions || [],
-                markedQuestions: data.markedQuestions || [], // 向後相容
-                lastQuestionCount: data.lastQuestionCount
+                markedQuestions: data.markedQuestions || []
             };
         }
     }
@@ -104,6 +99,15 @@ function saveQuizData(data) {
         console.error('儲存進度檔案時發生錯誤:', error);
     }
 }
+// Helper function to save progress immediately
+function saveProgressImmediately() {
+    const quizData = {
+        failedQuestions: failedQuestions,
+        answeredQuestions: answeredQuestions,
+        markedQuestions: markedQuestions
+    };
+    saveQuizData(quizData);
+}
 // Fisher-Yates shuffle algorithm
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -113,19 +117,16 @@ function shuffleArray(array) {
     return array;
 }
 // Main quiz function
-function runQuiz(questions, requestedCount) {
+function runQuiz(questions) {
     if (questions.length === 0) {
         console.log('沒有題目可供測驗。');
         return true;
     }
     let correctCount = 0;
     let wrongCount = 0;
-    let currentFailedQuestions = [];
-    let currentAnsweredQuestions = [];
     questions = shuffleArray(questions);
-    const quizQuestions = questions.slice(0, requestedCount);
-    for (let i = 0; i < quizQuestions.length; i++) {
-        const q = quizQuestions[i];
+    for (let i = 0; i < questions.length; i++) {
+        const q = questions[i];
         console.log(`\n第 ${i + 1} 題：${q.text}`);
         if (q.type === 'multiple-choice') {
             for (const option in q.options) {
@@ -143,103 +144,68 @@ function runQuiz(questions, requestedCount) {
         // Check if user wants to quit
         if (userAnswer.toLowerCase() === 'q') {
             console.log('\n返回主選單...');
-            return false; // Indicate quiz was interrupted
+            return false;
         }
-        // Handle marking options
+        // Handle special commands
         if (userAnswer === '-') {
             console.log('📝 此題已標記為永不再出現');
             console.log(`正確答案是：${q.correctAnswer}`);
             markedQuestions.push(q);
-            // Show explanation for true-false questions with X answer
             if (q.type === 'true-false' && q.correctAnswer === 'X' && q.explanation) {
                 console.log(yellowText(`說明：${q.explanation}`));
             }
-            continue; // Skip to next question without counting as right/wrong
+            saveProgressImmediately();
+            continue;
         }
         if (userAnswer === '?') {
             console.log('❓ 不知道答案...');
             console.log(`正確答案是：${q.correctAnswer}`);
             wrongCount++;
-            currentFailedQuestions.push(q);
-            // Show explanation for true-false questions with X answer
+            const exists = failedQuestions.some(failed => failed.id === q.id);
+            if (!exists) {
+                failedQuestions.push(q);
+            }
             if (q.type === 'true-false' && q.correctAnswer === 'X' && q.explanation) {
                 console.log(yellowText(`說明：${q.explanation}`));
             }
+            saveProgressImmediately();
             continue;
         }
+        // Check answer
         const normalizedAnswer = userAnswer.toUpperCase();
-        let isCorrect = false;
-        if (q.type === 'multiple-choice') {
-            isCorrect = normalizedAnswer === q.correctAnswer;
-        }
-        else {
-            isCorrect = normalizedAnswer === q.correctAnswer;
-        }
+        const isCorrect = normalizedAnswer === q.correctAnswer;
         if (isCorrect) {
             console.log(greenText('✔ 答對了！'));
             correctCount++;
-            currentAnsweredQuestions.push(q);
+            const exists = answeredQuestions.some(answered => answered.id === q.id);
+            if (!exists) {
+                answeredQuestions.push(q);
+            }
+            // Remove from failed questions if answered correctly
+            failedQuestions = failedQuestions.filter(failed => failed.id !== q.id);
         }
         else {
             console.log(redText('✘ 答錯了！'));
             console.log(`正確答案是：${q.correctAnswer}。`);
             wrongCount++;
-            currentFailedQuestions.push(q);
+            const exists = failedQuestions.some(failed => failed.id === q.id);
+            if (!exists) {
+                failedQuestions.push(q);
+            }
         }
-        // 是非題且標準答案是X時，一定顯示說明（不論答對錯）
+        // Show explanation for true-false X questions
         if (q.type === 'true-false' && q.correctAnswer === 'X' && q.explanation) {
             console.log(yellowText(`說明：${q.explanation}`));
         }
+        // Save progress immediately after each question
+        saveProgressImmediately();
     }
-    // Update failed questions (remove duplicates and add new ones)
-    for (const newFailed of currentFailedQuestions) {
-        const exists = failedQuestions.some(q => q.id === newFailed.id);
-        if (!exists) {
-            failedQuestions.push(newFailed);
-        }
-    }
-    // Update answered questions (remove duplicates and add new ones)
-    for (const newAnswered of currentAnsweredQuestions) {
-        const exists = answeredQuestions.some(q => q.id === newAnswered.id);
-        if (!exists) {
-            answeredQuestions.push(newAnswered);
-        }
-        // Remove from failed questions if answered correctly
-        failedQuestions = failedQuestions.filter(q => q.id !== newAnswered.id);
-    }
-    // Save progress
-    const quizData = {
-        failedQuestions: failedQuestions,
-        answeredQuestions: answeredQuestions,
-        markedQuestions: markedQuestions,
-        lastQuestionCount: requestedCount
-    };
-    saveQuizData(quizData);
     console.log('\n---');
     console.log('測驗結束！');
-    console.log(`總題數：${quizQuestions.length}`);
+    console.log(`總題數：${questions.length}`);
     console.log(`答對：${correctCount}`);
     console.log(`答錯：${wrongCount}`);
-    return true; // Quiz completed normally
-}
-// Function to get question count from user
-function getQuestionCount(maxQuestions, lastCount) {
-    const minQuestions = Math.min(1, maxQuestions);
-    const defaultCount = lastCount && lastCount >= minQuestions ? lastCount : Math.min(20, maxQuestions);
-    console.log(`\n請選擇出題數量 (最少 ${minQuestions} 題，最多 ${maxQuestions} 題)`);
-    if (lastCount) {
-        console.log(`上次選擇：${lastCount} 題`);
-    }
-    const input = readlineSync.question(`請輸入題數 [預設: ${defaultCount}]：`);
-    if (!input.trim()) {
-        return defaultCount;
-    }
-    const count = parseInt(input);
-    if (isNaN(count) || count < minQuestions || count > maxQuestions) {
-        console.log(`無效的題數，使用預設值：${defaultCount} 題`);
-        return defaultCount;
-    }
-    return count;
+    return true;
 }
 // Function to select question type
 function selectQuestionType(availableQuestions) {
@@ -346,7 +312,6 @@ function main() {
     failedQuestions = savedData.failedQuestions || [];
     answeredQuestions = savedData.answeredQuestions || [];
     markedQuestions = savedData.markedQuestions || [];
-    questionCount = savedData.lastQuestionCount || 20;
     while (true) {
         // Filter out already answered questions for available pool
         const unansweredQuestions = allQuestions.filter(q => !answeredQuestions.some(answered => answered.id === q.id));
@@ -381,8 +346,7 @@ function main() {
             const resetData = {
                 failedQuestions: [],
                 answeredQuestions: [],
-                markedQuestions: markedQuestions,
-                lastQuestionCount: questionCount
+                markedQuestions: markedQuestions
             };
             saveQuizData(resetData);
             console.log('已清除答對/答錯記錄，標記的題目依然不會出現。');
@@ -396,8 +360,7 @@ function main() {
             const resetAllData = {
                 failedQuestions: [],
                 answeredQuestions: [],
-                markedQuestions: [],
-                lastQuestionCount: questionCount
+                markedQuestions: []
             };
             saveQuizData(resetAllData);
             console.log('已清除所有記錄，包含標記的題目，所有題目將重新可用。');
@@ -414,17 +377,8 @@ function main() {
                 console.log('沒有符合條件的題目可供測驗。');
                 continue;
             }
-            const currentQuestionCount = getQuestionCount(questionsToAsk.length, questionCount);
-            const quizCompleted = runQuiz(questionsToAsk, currentQuestionCount);
-            // Always save progress, regardless of whether quiz was completed or quit early
-            questionCount = currentQuestionCount;
-            const updatedData = {
-                failedQuestions: failedQuestions,
-                answeredQuestions: answeredQuestions,
-                markedQuestions: markedQuestions,
-                lastQuestionCount: questionCount
-            };
-            saveQuizData(updatedData);
+            console.log(`\n開始測驗！共 ${questionsToAsk.length} 題，隨時可按 q 離開。`);
+            runQuiz(questionsToAsk);
             break; // Return to type selection after quiz
         }
     }
