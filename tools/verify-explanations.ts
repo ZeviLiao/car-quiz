@@ -12,7 +12,7 @@ interface Question {
 
 // 檢查說明的合理性
 function verifyExplanations() {
-  const questionsPath = path.join(__dirname, 'questions.json');
+  const questionsPath = path.join(__dirname, '..', 'questions.json');
   const content = fs.readFileSync(questionsPath, 'utf-8');
   const questions: Question[] = JSON.parse(content);
   

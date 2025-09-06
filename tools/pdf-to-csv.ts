@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import * as pdfParse from 'pdf-parse';
+import pdfParse from 'pdf-parse';
 
 interface TrueFalseQuestion {
   id: string;
@@ -26,7 +26,7 @@ class PdfToCsvConverter {
   private questionType: 'true-false' | 'multiple-choice';
 
   constructor(questionType: 'true-false' | 'multiple-choice' = 'true-false') {
-    this.dataDir = path.join(__dirname, 'data');
+    this.dataDir = path.join(__dirname, '..', 'data');
     this.questionType = questionType;
     this.outputPath = path.join(this.dataDir, 
       questionType === 'true-false' ? 'true-false-questions.csv' : 'multiple-choice-questions.csv'

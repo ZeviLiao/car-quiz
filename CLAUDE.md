@@ -8,24 +8,24 @@ This is a TypeScript-based interactive quiz application for automotive/vehicle m
 
 ## Architecture
 
-- **Main Application**: `quiz.ts` - Complete quiz logic, question management, and user interaction flow
+- **Main Application**: `src/quiz.ts` - Complete quiz logic, question management, and user interaction flow
 - **Question Data**: `questions.json` - JSON file containing all quiz questions with Traditional Chinese text
-- **Data Processing Pipeline**: `pdf-to-csv.ts` → `csv-to-json.ts` → `questions.json`
-- **Question Interface**: Defined in `quiz.ts:28-37` with support for multiple-choice and true-false question types
+- **Data Processing Pipeline**: `tools/pdf-to-csv.ts` → `tools/csv-to-json.ts` → `questions.json`
+- **Question Interface**: Defined in `src/quiz.ts:28-37` with support for multiple-choice and true-false question types
 
 ## Development Commands
 
 ```bash
 # Compile and run the main application
-npx tsc && node quiz.js
+npx tsc && node dist/src/quiz.js
 
 # Compile TypeScript only
 npx tsc
 
 # Data processing pipeline (if rebuilding question database)
-npx tsc pdf-to-csv.ts && node pdf-to-csv.js
-npx tsc pdf-to-csv-multiple-choice.ts && node pdf-to-csv-multiple-choice.js
-npx tsc csv-to-json.ts && node csv-to-json.js
+npx tsc && node dist/tools/pdf-to-csv.js
+npx tsc && node dist/tools/pdf-to-csv-multiple-choice.js
+npx tsc && node dist/tools/csv-to-json.js
 ```
 
 ## Key Components
@@ -43,9 +43,9 @@ npx tsc csv-to-json.ts && node csv-to-json.js
 - Conditional explanations: only shown for true/false questions with 'X' answers
 
 ### Data Processing Tools
-- **PDF Processing**: `pdf-to-csv.ts` and `pdf-to-csv-multiple-choice.ts` extract questions from PDF sources
-- **CSV Processing**: `csv-to-json.ts` converts CSV data to final JSON format with intelligent explanation matching
-- **Verification**: `verify-explanations.ts` validates explanation coverage for true/false questions
+- **PDF Processing**: `tools/pdf-to-csv.ts` and `tools/pdf-to-csv-multiple-choice.ts` extract questions from PDF sources
+- **CSV Processing**: `tools/csv-to-json.ts` converts CSV data to final JSON format with intelligent explanation matching
+- **Verification**: `tools/verify-explanations.ts` validates explanation coverage for true/false questions
 
 ## Question Types & Format
 - **Multiple Choice**: Numbered options (1, 2, 3) stored in `options` object
@@ -53,11 +53,12 @@ npx tsc csv-to-json.ts && node csv-to-json.js
 - **Explanations**: Automatically matched for true/false questions where correct answer is 'X'
 
 ## File Structure
-- `quiz.ts`: Main application logic
+- `src/quiz.ts`: Main application logic
+- `tools/`: Data processing utilities directory
 - `questions.json`: Complete question database (317 questions)
 - `quiz-data.json`: User progress persistence (answered/failed/marked)
 - `data/`: CSV source files for question data
-- Processing utilities: `pdf-to-csv*.ts`, `csv-to-json.ts`, `add-explanations.ts`
+- `dist/`: Compiled JavaScript output directory
 
 ## Dependencies
 - `readline-sync`: Console input handling

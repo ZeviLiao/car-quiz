@@ -47,7 +47,7 @@ npx tsc
 
 ### 2. 開始測驗
 ```bash
-node quiz.js
+node dist/src/quiz.js
 ```
 
 ### 3. 選擇測驗模式
@@ -156,15 +156,22 @@ b. 返回題型選擇
 ## 檔案結構
 
 ```
-├── quiz.ts                          # 主程式 (測驗邏輯)
+├── src/                              # 主程式目錄
+│   └── quiz.ts                       # 主程式 (測驗邏輯)
+├── tools/                            # 資料處理工具
+│   ├── pdf-to-csv.ts                 # PDF轉CSV工具
+│   ├── pdf-to-csv-multiple-choice.ts # 選擇題PDF處理工具
+│   ├── csv-to-json.ts                # CSV轉JSON工具
+│   ├── add-explanations.ts           # 新增說明工具
+│   ├── verify-explanations.ts        # 驗證說明工具
+│   └── debug-matching.ts             # 偵錯匹配工具
+├── data/                             # 原始資料
+│   ├── multiple-choice-questions.csv # 選擇題資料
+│   └── true-false-questions.csv      # 是非題資料
+├── dist/                             # 編譯輸出目錄
 ├── questions.json                    # 完整題庫
 ├── questions.example.json            # 題庫格式範例
-├── quiz-data.json                    # 測驗進度記錄 (答對/答錯/標記)
-├── pdf-to-csv.ts                    # PDF轉CSV工具
-├── csv-to-json.ts                   # CSV轉JSON工具
-└── data/
-    ├── multiple-choice-questions.csv # 選擇題資料
-    └── true-false-questions.csv      # 是非題資料
+└── quiz-data.json                    # 測驗進度記錄 (答對/答錯/標記)
 ```
 
 ## 開發工具
@@ -175,17 +182,17 @@ b. 返回題型選擇
 
 1. **PDF轉CSV** (選擇題)：
    ```bash
-   npx tsc pdf-to-csv-multiple-choice.ts && node pdf-to-csv-multiple-choice.js
+   npx tsc && node dist/tools/pdf-to-csv-multiple-choice.js
    ```
 
 2. **PDF轉CSV** (是非題)：
    ```bash
-   npx tsc pdf-to-csv.ts && node pdf-to-csv.js
+   npx tsc && node dist/tools/pdf-to-csv.js
    ```
 
 3. **一次性生成完整JSON**（包含說明）：
    ```bash
-   npx tsc csv-to-json.ts && node csv-to-json.js
+   npx tsc && node dist/tools/csv-to-json.js
    ```
 
 ### ✨ 自動化特色
