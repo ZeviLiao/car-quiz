@@ -165,13 +165,14 @@ b. 返回題型選擇
 │   ├── add-explanations.ts           # 新增說明工具
 │   ├── verify-explanations.ts        # 驗證說明工具
 │   └── debug-matching.ts             # 偵錯匹配工具
-├── data/                             # 原始資料
+├── src_data/                         # 原始CSV資料
 │   ├── multiple-choice-questions.csv # 選擇題資料
 │   └── true-false-questions.csv      # 是非題資料
-├── dist/                             # 編譯輸出目錄
-├── questions.json                    # 完整題庫
-├── questions.example.json            # 題庫格式範例
-└── quiz-data.json                    # 測驗進度記錄 (答對/答錯/標記)
+├── data/                             # JSON資料檔案
+│   ├── questions.json                # 完整題庫
+│   ├── questions.example.json        # 題庫格式範例
+│   └── quiz-data.json                # 測驗進度記錄 (答對/答錯/標記)
+└── dist/                             # 編譯輸出目錄
 ```
 
 ## 開發工具

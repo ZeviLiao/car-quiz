@@ -12,7 +12,7 @@ interface Question {
 
 // 檢查匹配情況
 function debugMatching() {
-  const questionsPath = path.join(__dirname, '..', 'questions.json');
+  const questionsPath = path.join(__dirname, '..', 'data', 'questions.json');
   const content = fs.readFileSync(questionsPath, 'utf-8');
   const questions: Question[] = JSON.parse(content);
   
