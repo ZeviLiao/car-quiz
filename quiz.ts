@@ -2,6 +2,28 @@ import * as readlineSync from 'readline-sync';
 import * as fs from 'fs';
 import * as path from 'path';
 
+// Color constants for terminal output
+const colors = {
+  reset: '\x1b[0m',
+  green: '\x1b[32m',
+  red: '\x1b[31m',
+  yellow: '\x1b[33m',
+  bright: '\x1b[1m'
+};
+
+// Helper functions for colored output
+function greenText(text: string): string {
+  return `${colors.green}${text}${colors.reset}`;
+}
+
+function redText(text: string): string {
+  return `${colors.red}${text}${colors.reset}`;
+}
+
+function yellowText(text: string): string {
+  return `${colors.yellow}${text}${colors.reset}`;
+}
+
 // Define the question data structure
 interface Question {
   id: string;
@@ -135,7 +157,7 @@ function runQuiz(questions: Question[], requestedCount: number): boolean {
       
       // Show explanation for true-false questions with X answer
       if (q.type === 'true-false' && q.correctAnswer === 'X' && q.explanation) {
-        console.log(`說明：${q.explanation}`);
+        console.log(yellowText(`說明：${q.explanation}`));
       }
       continue; // Skip to next question without counting as right/wrong
     }
@@ -148,7 +170,7 @@ function runQuiz(questions: Question[], requestedCount: number): boolean {
       
       // Show explanation for true-false questions with X answer
       if (q.type === 'true-false' && q.correctAnswer === 'X' && q.explanation) {
-        console.log(`說明：${q.explanation}`);
+        console.log(yellowText(`說明：${q.explanation}`));
       }
       continue;
     }
@@ -163,11 +185,11 @@ function runQuiz(questions: Question[], requestedCount: number): boolean {
     }
 
     if (isCorrect) {
-      console.log('✔ 答對了！');
+      console.log(greenText('✔ 答對了！'));
       correctCount++;
       currentAnsweredQuestions.push(q);
     } else {
-      console.log(`✘ 答錯了！`);
+      console.log(redText('✘ 答錯了！'));
       console.log(`正確答案是：${q.correctAnswer}。`);
       wrongCount++;
       currentFailedQuestions.push(q);
@@ -175,11 +197,17 @@ function runQuiz(questions: Question[], requestedCount: number): boolean {
     
     // 是非題且標準答案是X時，一定顯示說明（不論答對錯）
     if (q.type === 'true-false' && q.correctAnswer === 'X' && q.explanation) {
-      console.log(`說明：${q.explanation}`);
+      console.log(yellowText(`說明：${q.explanation}`));
     }
   }
 
-  failedQuestions = currentFailedQuestions;
+  // Update failed questions (remove duplicates and add new ones)
+  for (const newFailed of currentFailedQuestions) {
+    const exists = failedQuestions.some(q => q.id === newFailed.id);
+    if (!exists) {
+      failedQuestions.push(newFailed);
+    }
+  }
   
   // Update answered questions (remove duplicates and add new ones)
   for (const newAnswered of currentAnsweredQuestions) {
@@ -187,6 +215,9 @@ function runQuiz(questions: Question[], requestedCount: number): boolean {
     if (!exists) {
       answeredQuestions.push(newAnswered);
     }
+    
+    // Remove from failed questions if answered correctly
+    failedQuestions = failedQuestions.filter(q => q.id !== newAnswered.id);
   }
   
   // Save progress
@@ -232,6 +263,115 @@ function getQuestionCount(maxQuestions: number, lastCount?: number): number {
   return count;
 }
 
+// Function to select question type
+function selectQuestionType(availableQuestions: Question[]): Question[] | 'exit' | 'reset' | 'reset-all' {
+  const trueFalseAvailable = availableQuestions.filter(q => q.type === 'true-false');
+  const multipleChoiceAvailable = availableQuestions.filter(q => q.type === 'multiple-choice');
+  
+  const typeOptions = [
+    {
+      key: '1',
+      label: `是非題 (${trueFalseAvailable.length} 題)`,
+      condition: () => trueFalseAvailable.length > 0,
+      questions: trueFalseAvailable
+    },
+    {
+      key: '2', 
+      label: `選擇題 (${multipleChoiceAvailable.length} 題)`,
+      condition: () => multipleChoiceAvailable.length > 0,
+      questions: multipleChoiceAvailable
+    },
+    {
+      key: '3',
+      label: `混合題型 (${availableQuestions.length} 題)`,
+      condition: () => availableQuestions.length > 0,
+      questions: availableQuestions
+    },
+    {
+      key: 'r',
+      label: 'reset 重新開始 (清除答對/答錯記錄，保留標記)',
+      condition: () => true
+    },
+    {
+      key: 'R',
+      label: 'reset-all 完全重置 (清除所有記錄包含標記)',
+      condition: () => true
+    },
+    {
+      key: 'q',
+      label: '離開',
+      condition: () => true
+    }
+  ];
+  
+  console.log('\n=== 第一步：選擇題型 ===');
+  typeOptions.forEach(option => {
+    if (option.condition()) {
+      console.log(`${option.key}. ${option.label}`);
+    }
+  });
+  
+  const choice = readlineSync.question('請選擇題型：');
+  
+  const selectedOption = typeOptions.find(option => option.key === choice && option.condition());
+  if (!selectedOption) {
+    console.log('無效的選擇，請重新選擇。');
+    return selectQuestionType(availableQuestions);
+  }
+  
+  if (choice === 'q') return 'exit';
+  if (choice === 'r') return 'reset';
+  if (choice === 'R') return 'reset-all';
+  
+  return selectedOption.questions || [];
+}
+
+// Function to select answer history filter  
+function selectAnswerFilter(selectedQuestions: Question[], failedQuestions: Question[]): Question[] | 'back' {
+  const failedOfSelectedType = failedQuestions.filter(failed => 
+    selectedQuestions.some(q => q.id === failed.id)
+  );
+  
+  const filterOptions = [
+    {
+      key: '1',
+      label: `只測驗答錯的題目 (${failedOfSelectedType.length} 題)`,
+      condition: () => failedOfSelectedType.length > 0,
+      questions: failedOfSelectedType
+    },
+    {
+      key: '2',
+      label: `測驗所有可用題目 (${selectedQuestions.length} 題)`,
+      condition: () => selectedQuestions.length > 0,
+      questions: selectedQuestions
+    },
+    {
+      key: 'b',
+      label: '返回題型選擇',
+      condition: () => true
+    }
+  ];
+  
+  console.log('\n=== 第二步：選擇範圍 ===');
+  filterOptions.forEach(option => {
+    if (option.condition()) {
+      console.log(`${option.key}. ${option.label}`);
+    }
+  });
+  
+  const choice = readlineSync.question('請選擇測驗範圍：');
+  
+  const selectedOption = filterOptions.find(option => option.key === choice && option.condition());
+  if (!selectedOption) {
+    console.log('無效的選擇，請重新選擇。');
+    return selectAnswerFilter(selectedQuestions, failedQuestions);
+  }
+  
+  if (choice === 'b') return 'back';
+  
+  return selectedOption.questions || [];
+}
+
 // Main function to run the application
 function main(): void {
   const allQuestions: Question[] = loadQuestions();
@@ -244,16 +384,13 @@ function main(): void {
   questionCount = savedData.lastQuestionCount || 20;
 
   while (true) {
-    let questionsToAsk: Question[];
-    let currentQuestionCount: number;
-    
     // Filter out already answered questions for available pool
     const unansweredQuestions = allQuestions.filter(q => 
       !answeredQuestions.some(answered => answered.id === q.id)
     );
     
     // Show progress info
-    const totalAvailableQuestions = allQuestions.length; // Available questions after filtering marked ones
+    const totalAvailableQuestions = allQuestions.length;
     const markedCount = markedQuestions.length;
     const answeredCount = answeredQuestions.length;
     const failedCount = failedQuestions.length;
@@ -274,40 +411,30 @@ function main(): void {
       console.log('選擇 reset 重新開始全部題目');
     }
     
-    console.log('\n=== 選單 ===');
-    if (failedCount > 0) {
-      console.log('1. 只測驗答錯的題目');
-    }
-    if (availableQuestions.length > 0) {
-      console.log('2. 測驗可用題目 (未答過 + 答錯)');
-    }
-    console.log('3. reset 重新開始 (清除答對/答錯記錄，保留標記)');
-    console.log('4. reset-all 完全重置 (清除所有記錄包含標記)');
-    console.log('5. 離開');
+    // Two-stage selection process
+    const typeSelection = selectQuestionType(availableQuestions);
     
-    const choice = readlineSync.question('請輸入您的選擇：');
-    console.log('---');
-
-    if (choice === '1' && failedCount > 0) {
-      questionsToAsk = failedQuestions;
-      currentQuestionCount = getQuestionCount(questionsToAsk.length, Math.min(questionCount, questionsToAsk.length));
-    } else if (choice === '2' && availableQuestions.length > 0) {
-      questionsToAsk = availableQuestions;
-      currentQuestionCount = getQuestionCount(questionsToAsk.length, questionCount);
-    } else if (choice === '3') {
+    if (typeSelection === 'exit') {
+      console.log('測驗已結束，謝謝使用。');
+      break;
+    }
+    
+    if (typeSelection === 'reset') {
       console.log('重設答對/答錯記錄 (保留標記)...');
       failedQuestions = [];
       answeredQuestions = [];
       const resetData: QuizData = {
         failedQuestions: [],
         answeredQuestions: [],
-        markedQuestions: markedQuestions, // Keep marked questions
+        markedQuestions: markedQuestions,
         lastQuestionCount: questionCount
       };
       saveQuizData(resetData);
       console.log('已清除答對/答錯記錄，標記的題目依然不會出現。');
       continue;
-    } else if (choice === '4') {
+    }
+    
+    if (typeSelection === 'reset-all') {
       console.log('完全重置所有記錄 (包含標記)...');
       failedQuestions = [];
       answeredQuestions = [];
@@ -321,18 +448,36 @@ function main(): void {
       saveQuizData(resetAllData);
       console.log('已清除所有記錄，包含標記的題目，所有題目將重新可用。');
       continue;
-    } else if (choice === '5') {
-      console.log('測驗已結束，謝謝使用。');
-      break;
-    } else {
-      console.log('無效的選擇，請重新選擇。');
-      continue;
     }
-
-    const quizCompleted = runQuiz(questionsToAsk, currentQuestionCount);
     
-    if (quizCompleted) {
-      questionCount = currentQuestionCount; // Remember the question count for next time
+    // Second stage: select answer history filter
+    while (true) {
+      const filterSelection = selectAnswerFilter(typeSelection as Question[], failedQuestions);
+      
+      if (filterSelection === 'back') {
+        break; // Go back to type selection
+      }
+      
+      const questionsToAsk = filterSelection as Question[];
+      if (questionsToAsk.length === 0) {
+        console.log('沒有符合條件的題目可供測驗。');
+        continue;
+      }
+      
+      const currentQuestionCount = getQuestionCount(questionsToAsk.length, questionCount);
+      const quizCompleted = runQuiz(questionsToAsk, currentQuestionCount);
+      
+      // Always save progress, regardless of whether quiz was completed or quit early
+      questionCount = currentQuestionCount;
+      const updatedData: QuizData = {
+        failedQuestions: failedQuestions,
+        answeredQuestions: answeredQuestions,
+        markedQuestions: markedQuestions,
+        lastQuestionCount: questionCount
+      };
+      saveQuizData(updatedData);
+      
+      break; // Return to type selection after quiz
     }
   }
 }
