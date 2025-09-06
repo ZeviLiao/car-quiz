@@ -26,7 +26,7 @@ class PdfToCsvConverter {
   private questionType: 'true-false' | 'multiple-choice';
 
   constructor(questionType: 'true-false' | 'multiple-choice' = 'true-false') {
-    this.dataDir = path.join(__dirname, '..', 'src_data');
+    this.dataDir = path.join(__dirname, 'src_data');
     this.questionType = questionType;
     this.outputPath = path.join(this.dataDir, 
       questionType === 'true-false' ? 'true-false-questions.csv' : 'multiple-choice-questions.csv'

@@ -139,7 +139,7 @@ function matchQuestionWithExplanation(questionText: string): string | undefined 
 async function addExplanationsToQuestions() {
   try {
     // 讀取現有的questions.json
-    const questionsPath = path.join(__dirname, '..', 'data', 'questions.json');
+    const questionsPath = path.join(__dirname, '..', '..', 'data', 'questions.json');
     const questionsContent = fs.readFileSync(questionsPath, 'utf-8');
     const questions: Question[] = JSON.parse(questionsContent);
     

@@ -10,7 +10,6 @@
     "rootDir": "."
   },
   "include": [
-    "src/**/*",
-    "tools/**/*"
+    "src/**/*"
   ]
 }

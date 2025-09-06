@@ -10,7 +10,7 @@ This is a TypeScript-based interactive quiz application for automotive/vehicle m
 
 - **Main Application**: `src/quiz.ts` - Complete quiz logic, question management, and user interaction flow
 - **Question Data**: `data/questions.json` - JSON file containing all quiz questions with Traditional Chinese text
-- **Data Processing Pipeline**: `tools/pdf-to-csv.ts` → `tools/csv-to-json.ts` → `data/questions.json`
+- **Data Processing Pipeline**: `src/tools/pdf-to-csv.ts` → `src/tools/csv-to-json.ts` → `data/questions.json`
 - **Question Interface**: Defined in `src/quiz.ts:28-37` with support for multiple-choice and true-false question types
 
 ## Development Commands
@@ -23,9 +23,9 @@ npx tsc && node dist/src/quiz.js
 npx tsc
 
 # Data processing pipeline (if rebuilding question database)
-npx tsc && node dist/tools/pdf-to-csv.js
-npx tsc && node dist/tools/pdf-to-csv-multiple-choice.js
-npx tsc && node dist/tools/csv-to-json.js
+npx tsc && node dist/src/tools/pdf-to-csv.js
+npx tsc && node dist/src/tools/pdf-to-csv-multiple-choice.js
+npx tsc && node dist/src/tools/csv-to-json.js
 ```
 
 ## Key Components
@@ -43,9 +43,9 @@ npx tsc && node dist/tools/csv-to-json.js
 - Conditional explanations: only shown for true/false questions with 'X' answers
 
 ### Data Processing Tools
-- **PDF Processing**: `tools/pdf-to-csv.ts` and `tools/pdf-to-csv-multiple-choice.ts` extract questions from PDF sources
-- **CSV Processing**: `tools/csv-to-json.ts` converts CSV data to final JSON format with intelligent explanation matching
-- **Verification**: `tools/verify-explanations.ts` validates explanation coverage for true/false questions
+- **PDF Processing**: `src/tools/pdf-to-csv.ts` and `src/tools/pdf-to-csv-multiple-choice.ts` extract questions from PDF sources
+- **CSV Processing**: `src/tools/csv-to-json.ts` converts CSV data to final JSON format with intelligent explanation matching
+- **Verification**: `src/tools/verify-explanations.ts` validates explanation coverage for true/false questions
 
 ## Question Types & Format
 - **Multiple Choice**: Numbered options (1, 2, 3) stored in `options` object
@@ -54,10 +54,10 @@ npx tsc && node dist/tools/csv-to-json.js
 
 ## File Structure
 - `src/quiz.ts`: Main application logic
-- `tools/`: Data processing utilities directory
+- `src/tools/`: Data processing utilities directory
+- `src/tools/src_data/`: CSV source files for question data
 - `data/questions.json`: Complete question database (317 questions)
 - `data/quiz-data.json`: User progress persistence (answered/failed/marked)
-- `src_data/`: CSV source files for question data
 - `dist/`: Compiled JavaScript output directory
 
 ## Dependencies
