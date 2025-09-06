@@ -4,48 +4,63 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a TypeScript-based interactive quiz application for automotive/vehicle maintenance questions. The application presents multiple-choice and true/false questions in Traditional Chinese, tracks incorrect answers, and allows users to retry failed questions.
+This is a TypeScript-based interactive quiz application for automotive/vehicle maintenance questions with 317 questions total (143 multiple-choice, 174 true-false). The application presents questions in Traditional Chinese, tracks progress in real-time, and provides comprehensive question management with immediate progress saving.
 
 ## Architecture
 
-- **Main Application**: `quiz.ts` - Contains the complete quiz logic, question management, and user interaction flow
+- **Main Application**: `quiz.ts` - Complete quiz logic, question management, and user interaction flow
 - **Question Data**: `questions.json` - JSON file containing all quiz questions with Traditional Chinese text
-- **Question Interface**: Defined in `quiz.ts:6-14` with support for multiple-choice and true-false question types
-
-## Key Components
-
-### Question Management
-- Questions are loaded from `questions.json` using `loadQuestions()` function
-- Questions are shuffled using Fisher-Yates algorithm via `shuffleArray()`
-- Failed questions are tracked globally and can be retested separately
-
-### User Interaction Flow
-- Uses `readline-sync` for console-based user input
-- Supports menu-driven interface for choosing between all questions, failed questions only, or exit
-- Provides immediate feedback on correct/incorrect answers with correct answer display
-
-### Question Types
-- **Multiple Choice**: Options labeled with numbers (1, 2, 3), stored in `options` object
-- **True/False**: Uses 'O' for correct (正確) and 'X' for incorrect (錯誤) answers
+- **Data Processing Pipeline**: `pdf-to-csv.ts` → `csv-to-json.ts` → `questions.json`
+- **Question Interface**: Defined in `quiz.ts:28-37` with support for multiple-choice and true-false question types
 
 ## Development Commands
 
 ```bash
-# Compile TypeScript
+# Compile and run the main application
+npx tsc && node quiz.js
+
+# Compile TypeScript only
 npx tsc
 
-# Run the application
-node quiz.js
+# Data processing pipeline (if rebuilding question database)
+npx tsc pdf-to-csv.ts && node pdf-to-csv.js
+npx tsc pdf-to-csv-multiple-choice.ts && node pdf-to-csv-multiple-choice.js
+npx tsc csv-to-json.ts && node csv-to-json.js
 ```
 
-## Dependencies
-- `readline-sync`: Console input handling
-- `@types/node`: Node.js type definitions
-- `@types/readline-sync`: TypeScript definitions for readline-sync
-- `typescript`: TypeScript compiler
+## Key Components
+
+### Question Management System
+- Questions loaded from `questions.json` using `loadQuestions()` function
+- Fisher-Yates shuffling algorithm via `shuffleArray()` for randomization
+- Three-category progress tracking: answered correctly, failed (retry queue), marked (permanently excluded)
+- Real-time progress saving in `quiz-data.json` after each question
+
+### User Interaction Flow
+- Console-based interface using `readline-sync`
+- Two-stage menu system: question type selection → scope selection
+- Special commands: '-' (mark as never show), '?' (reveal answer, add to failed), 'q' (quit)
+- Conditional explanations: only shown for true/false questions with 'X' answers
+
+### Data Processing Tools
+- **PDF Processing**: `pdf-to-csv.ts` and `pdf-to-csv-multiple-choice.ts` extract questions from PDF sources
+- **CSV Processing**: `csv-to-json.ts` converts CSV data to final JSON format with intelligent explanation matching
+- **Verification**: `verify-explanations.ts` validates explanation coverage for true/false questions
+
+## Question Types & Format
+- **Multiple Choice**: Numbered options (1, 2, 3) stored in `options` object
+- **True/False**: 'O' for correct (正確), 'X' for incorrect (錯誤)
+- **Explanations**: Automatically matched for true/false questions where correct answer is 'X'
 
 ## File Structure
 - `quiz.ts`: Main application logic
-- `questions.json`: Question database with automotive maintenance questions
-- `tsconfig.json`: TypeScript configuration targeting ES2016 with CommonJS modules
-- `package.json`: Project dependencies and metadata
+- `questions.json`: Complete question database (317 questions)
+- `quiz-data.json`: User progress persistence (answered/failed/marked)
+- `data/`: CSV source files for question data
+- Processing utilities: `pdf-to-csv*.ts`, `csv-to-json.ts`, `add-explanations.ts`
+
+## Dependencies
+- `readline-sync`: Console input handling
+- `pdf-parse`: PDF text extraction for data processing
+- `typescript`: TypeScript compiler
+- Type definitions: `@types/node`, `@types/readline-sync`, `@types/pdf-parse`

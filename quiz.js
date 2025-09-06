@@ -143,6 +143,16 @@ function runQuiz(questions) {
         const userAnswer = readlineSync.question('您的答案：');
         // Check if user wants to quit
         if (userAnswer.toLowerCase() === 'q') {
+            // Show round summary before quitting
+            const totalAnswered = correctCount + wrongCount;
+            if (totalAnswered > 0) {
+                const percentage = Math.round((correctCount / totalAnswered) * 100);
+                console.log('\n--- 本輪測驗成果 ---');
+                console.log(`總答題數：${totalAnswered}`);
+                console.log(`答對：${correctCount}`);
+                console.log(`答錯：${wrongCount}`);
+                console.log(`正確率：${percentage}%`);
+            }
             console.log('\n返回主選單...');
             return false;
         }
