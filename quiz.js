@@ -134,7 +134,10 @@ function runQuiz(questions) {
             }
         }
         else {
-            console.log('  請回答 O/o (正確) 或 X/x (錯誤)');
+            console.log('  請選擇：');
+            console.log('  (1) 正確 (O)');
+            console.log('  (2) 錯誤 (X)');
+            console.log('  或直接回答 O/o (正確) 或 X/x (錯誤)');
         }
         console.log('  或輸入：');
         console.log('    - : 標記此題永不再出現');
@@ -182,7 +185,12 @@ function runQuiz(questions) {
             continue;
         }
         // Check answer
-        const normalizedAnswer = userAnswer.toUpperCase();
+        let normalizedAnswer = userAnswer.toUpperCase();
+        // Convert numeric input for true/false questions
+        if (q.type === 'true-false') {
+            const numericMap = { '1': 'O', '2': 'X' };
+            normalizedAnswer = numericMap[userAnswer] || normalizedAnswer;
+        }
         const isCorrect = normalizedAnswer === q.correctAnswer;
         if (isCorrect) {
             console.log(greenText('✔ 答對了！'));

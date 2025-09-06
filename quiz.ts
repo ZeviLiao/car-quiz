@@ -132,7 +132,10 @@ function runQuiz(questions: Question[]): boolean {
         console.log(`  (${option}) ${q.options[option]}`);
       }
     } else {
-      console.log('  請回答 O/o (正確) 或 X/x (錯誤)');
+      console.log('  請選擇：');
+      console.log('  (1) 正確 (O)');
+      console.log('  (2) 錯誤 (X)');
+      console.log('  或直接回答 O/o (正確) 或 X/x (錯誤)');
     }
     
     console.log('  或輸入：');
@@ -191,7 +194,14 @@ function runQuiz(questions: Question[]): boolean {
     }
     
     // Check answer
-    const normalizedAnswer = userAnswer.toUpperCase();
+    let normalizedAnswer = userAnswer.toUpperCase();
+    
+    // Convert numeric input for true/false questions
+    if (q.type === 'true-false') {
+      const numericMap: { [key: string]: string } = { '1': 'O', '2': 'X' };
+      normalizedAnswer = numericMap[userAnswer] || normalizedAnswer;
+    }
+    
     const isCorrect = normalizedAnswer === q.correctAnswer;
 
     if (isCorrect) {
