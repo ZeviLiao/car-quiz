@@ -4,65 +4,157 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a TypeScript-based interactive quiz application for automotive/vehicle maintenance questions with 317 questions total (143 multiple-choice, 174 true-false). The application presents questions in Traditional Chinese, tracks progress in real-time, and provides comprehensive question management with immediate progress saving.
-
-## Architecture
-
-- **Main Application**: `src/quiz.ts` - Complete quiz logic, question management, and user interaction flow
-- **Question Data**: `src/data/questions.json` - JSON file containing all quiz questions with Traditional Chinese text
-- **Data Processing Pipeline**: `src/tools/pdf-to-csv.ts` → `src/tools/csv-to-json.ts` → `src/data/questions.json`
-- **Question Interface**: Defined in `src/quiz.ts:28-37` with support for multiple-choice and true-false question types
+TypeScript-based interactive console quiz application for automotive maintenance education. Features 317 Traditional Chinese questions (143 multiple-choice, 174 true-false) with sophisticated progress tracking, immediate data persistence, and intelligent explanation matching.
 
 ## Development Commands
 
 ```bash
-# Compile and run the main application
-npx tsc && node dist/src/quiz.js
+# Production build (main app only, excludes tools)
+npm run build
 
-# Compile TypeScript only
+# Start quiz application
+npm start
+
+# Development workflow (build + run)
+npm run dev
+
+# Compile all TypeScript files including tools
 npx tsc
 
-# Data processing pipeline (if rebuilding question database)
-npx tsc && node dist/src/tools/pdf-to-csv.js
-npx tsc && node dist/src/tools/pdf-to-csv-multiple-choice.js
-npx tsc && node dist/src/tools/csv-to-json.js
+# Compile production build only
+npx tsc -p tsconfig.prod.json
+
+# Data processing pipeline (rebuild question database)
+npx tsc && node dist/tools/pdf-to-csv.js
+npx tsc && node dist/tools/pdf-to-csv-multiple-choice.js
+npx tsc && node dist/tools/csv-to-json.ts
 ```
 
-## Key Components
+## Core Architecture
 
-### Question Management System
-- Questions loaded from `questions.json` using `loadQuestions()` function
-- Fisher-Yates shuffling algorithm via `shuffleArray()` for randomization
-- Three-category progress tracking: answered correctly, failed (retry queue), marked (permanently excluded)
-- Real-time progress saving in `src/data/quiz-data.json` after each question
+### Application Flow (`src/quiz.ts`)
+**Two-Stage Menu System**:
+1. Question type selection (true-false/multiple-choice/mixed)
+2. Scope selection (failed-only/all-available)
 
-### User Interaction Flow
-- Console-based interface using `readline-sync`
-- Two-stage menu system: question type selection → scope selection
-- Special commands: '-' (mark as never show), '?' (reveal answer, add to failed), 'q' (quit)
-- Conditional explanations: only shown for true/false questions with 'X' answers
+**Progress Management**: Three-category tracking system
+- `answeredQuestions`: Correctly answered, excluded from future rounds
+- `failedQuestions`: Incorrect answers, priority for retry
+- `markedQuestions`: Permanently excluded via `-` command
 
-### Data Processing Tools
-- **PDF Processing**: `src/tools/pdf-to-csv.ts` and `src/tools/pdf-to-csv-multiple-choice.ts` extract questions from PDF sources
-- **CSV Processing**: `src/tools/csv-to-json.ts` converts CSV data to final JSON format with intelligent explanation matching
-- **Verification**: `src/tools/verify-explanations.ts` validates explanation coverage for true/false questions
+**Question Loading Logic**:
+- Loads from `src/data/questions.json` via `loadQuestions()`
+- **Hardcoded filters**: Excludes controversial question ID '034'
+- **Dynamic filters**: Excludes user-marked and previously answered questions
+- **Randomization**: Fisher-Yates shuffle algorithm via `shuffleArray()`
 
-## Question Types & Format
-- **Multiple Choice**: Numbered options (1, 2, 3) stored in `options` object
-- **True/False**: 'O' for correct (正確), 'X' for incorrect (錯誤)
-- **Explanations**: Automatically matched for true/false questions where correct answer is 'X'
+### Data Persistence (`quiz-data.json`)
+**Real-time saving**: Every user interaction triggers `saveQuizData()`
+- Prevents data loss on unexpected exits
+- Atomic write operations to `src/data/quiz-data.json`
+- Automatic session recovery on startup
 
-## File Structure
-- `src/quiz.ts`: Main application logic
-- `src/data/`: JSON data files directory
-- `src/data/questions.json`: Complete question database (317 questions)
-- `src/data/quiz-data.json`: User progress persistence (answered/failed/marked)
-- `src/tools/`: Data processing utilities directory
-- `src/tools/src_data/`: CSV source files for question data
-- `dist/`: Compiled JavaScript output directory
+### User Interaction Commands
+**During Quiz**:
+- `'-'`: Mark never show again (permanent exclusion + answer reveal)
+- `'?'`: Don't know (answer reveal + add to failed queue)
+- `'q'`: Quit with session statistics
 
-## Dependencies
-- `readline-sync`: Console input handling
-- `pdf-parse`: PDF text extraction for data processing
-- `typescript`: TypeScript compiler
-- Type definitions: `@types/node`, `@types/readline-sync`, `@types/pdf-parse`
+**Answer Input Flexibility**:
+- True/false: Accept `1`/`2`, `O`/`X`, `o`/`x`
+- Multiple-choice: Direct option selection `1`, `2`, `3`
+
+## Data Processing Pipeline
+
+### 1. PDF Extraction (`src/tools/pdf-to-csv.ts`)
+**Primary Algorithm**: Pattern-based text extraction using `pdf-parse`
+- **True/False Pattern**: `^\d{3}\s+[○X]\s+(.+)$`
+- **Multiple-Choice Pattern**: `^\d{3}\s+\d(.*)$`
+- **Multi-line handling**: Smart text assembly for questions spanning multiple lines
+- **Data validation**: Filters headers, validates content length
+
+### 2. CSV Processing (`src/tools/csv-to-json.ts`)
+**Core Logic**: Merges CSV files with intelligent explanation matching
+- **Explanation Database**: 157 hardcoded explanation mappings
+- **Fuzzy Matching**: 80% similarity threshold using character comparison
+- **Text Normalization**: Removes punctuation/spaces for better matching
+- **Conditional Explanations**: Only adds to true-false questions with 'X' answers
+
+### 3. Data Validation Tools
+- `verify-explanations.ts`: QA tool for explanation coverage
+- `debug-matching.ts`: Diagnostic statistics for explanation matching
+- `add-explanations.ts`: Standalone explanation addition utility
+
+## Build System
+
+### Dual Configuration Strategy
+**Production (`tsconfig.prod.json`)**:
+- **Selective compilation**: Only `src/quiz.ts` and `src/types/`
+- **Excludes**: `src/tools/**/*` from output
+- **Purpose**: Lightweight deployment build
+
+**Development (`tsconfig.json`)**:
+- **Full compilation**: Includes all tools and utilities
+- **Purpose**: Development and data processing
+
+### Output Structure
+```
+dist/
+├── quiz.js          # Main application
+├── types/           # TypeScript interfaces  
+├── data/            # Copied from src/data/
+└── tools/           # Data processing utilities (dev only)
+```
+
+## Question Data Format
+
+### Question Interface
+```typescript
+interface Question {
+  id: string;                    // Format: "001", "002", etc.
+  type: 'multiple-choice' | 'true-false';
+  text: string;                  // Traditional Chinese question text
+  correctAnswer: string;         // "1"|"2"|"3" for MC, "O"|"X" for TF
+  options?: {                    // Only for multiple-choice
+    [key: string]: string;       // "1": "選項一", "2": "選項二", etc.
+  };
+  explanation?: string;          // Only for true-false with 'X' answers
+}
+```
+
+### Progress Data Format
+```typescript
+interface QuizData {
+  failedQuestions: Question[];     # Incorrect answers → retry queue
+  answeredQuestions: Question[];   # Correct answers → excluded
+  markedQuestions: Question[];     # User marked → permanently excluded
+}
+```
+
+## Implementation Details
+
+### Terminal UI
+- **Color System**: ANSI escape codes via `colors` constant
+- **Input Library**: `readline-sync` for synchronous console interaction
+- **Progress Display**: Real-time statistics after each question
+
+### Data Integrity
+- **Question Exclusion**: ID '034' hardcoded filter due to controversial content
+- **Explanation Coverage**: 64 true-false questions with 'X' answers have explanations
+- **Source Control**: CSV files in `src/tools/src_data/` are single source of truth
+
+### Error Handling
+- **Graceful failures**: PDF parsing errors logged but don't crash application
+- **Data validation**: Question format validation before processing
+- **Recovery mechanisms**: Automatic progress recovery on restart
+
+## Key Algorithms
+
+### Fisher-Yates Shuffle (`shuffleArray()`)
+Ensures unbiased question randomization for each quiz session.
+
+### Fuzzy String Matching (explanation pairing)
+Character-by-character comparison with 80% similarity threshold for automatic explanation assignment.
+
+### Three-Category Progress Tracking
+Sophisticated state management ensuring questions flow correctly between answered/failed/marked categories.

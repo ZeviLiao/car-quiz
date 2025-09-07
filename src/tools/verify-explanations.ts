@@ -1,14 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-
-interface Question {
-  id: string;
-  type: 'multiple-choice' | 'true-false';
-  text: string;
-  correctAnswer: string;
-  options?: { [key: string]: string };
-  explanation?: string;
-}
+import { Question } from '../types';
 
 // 檢查說明的合理性
 function verifyExplanations() {

@@ -1,15 +1,7 @@
 import * as readlineSync from 'readline-sync';
 import * as fs from 'fs';
 import * as path from 'path';
-
-// Color constants for terminal output
-const colors = {
-  reset: '\x1b[0m',
-  green: '\x1b[32m',
-  red: '\x1b[31m',
-  yellow: '\x1b[33m',
-  bright: '\x1b[1m'
-};
+import { Question, QuizData, colors } from './types';
 
 // Helper functions for colored output
 function greenText(text: string): string {
@@ -24,24 +16,6 @@ function yellowText(text: string): string {
   return `${colors.yellow}${text}${colors.reset}`;
 }
 
-// Define the question data structure
-interface Question {
-  id: string;
-  type: 'multiple-choice' | 'true-false';
-  text: string;
-  correctAnswer: string;
-  options?: {
-    [key: string]: string;
-  };
-  explanation?: string;
-}
-
-// Persistent data structure
-interface QuizData {
-  failedQuestions: Question[];
-  answeredQuestions: Question[];
-  markedQuestions: Question[];
-}
 
 let failedQuestions: Question[] = [];
 let answeredQuestions: Question[] = [];

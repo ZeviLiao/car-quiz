@@ -1,22 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import pdfParse from 'pdf-parse';
-
-interface TrueFalseQuestion {
-  id: string;
-  type: 'true-false';
-  text: string;
-  correctAnswer: 'O' | 'X';
-  explanation?: string;
-}
-
-interface MultipleChoiceQuestion {
-  id: string;
-  type: 'multiple-choice';
-  text: string;
-  options: { [key: string]: string };
-  correctAnswer: string;
-}
+import { TrueFalseQuestion, MultipleChoiceQuestion } from '../types';
 
 type Question = TrueFalseQuestion | MultipleChoiceQuestion;
 

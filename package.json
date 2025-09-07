@@ -2,13 +2,13 @@
   "name": "car-quiz",
   "version": "1.0.0",
   "description": "Interactive automotive quiz application in Traditional Chinese",
-  "main": "dist/src/quiz.js",
+  "main": "dist/quiz.js",
   "scripts": {
     "build": "npm run clean && npm run compile && npm run copy-data",
     "clean": "rm -rf dist",
     "compile": "npx tsc -p tsconfig.prod.json",
-    "copy-data": "cp -r src/data dist/src/",
-    "start": "node dist/src/quiz.js",
+    "copy-data": "cp -r src/data dist/",
+    "start": "node dist/quiz.js",
     "dev": "npm run build && npm start"
   },
   "dependencies": {

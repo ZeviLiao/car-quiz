@@ -4,7 +4,8 @@
     "outDir": "./dist"
   },
   "include": [
-    "src/quiz.ts"
+    "src/quiz.ts",
+    "src/types/index.ts"
   ],
   "exclude": [
     "src/tools/**/*"
