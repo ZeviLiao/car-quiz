@@ -23,7 +23,7 @@ let markedQuestions: Question[] = [];
 const DATA_FILE = path.join(__dirname, 'data', 'quiz-data.json');
 
 // Function to load questions from a JSON file
-function loadQuestions(): Question[] {
+function loadQuestions(excludeMarked: Question[] = []): Question[] {
   try {
     const filePath = path.join(__dirname, 'data', 'questions.json');
     const fileContent = fs.readFileSync(filePath, 'utf-8');
@@ -31,7 +31,7 @@ function loadQuestions(): Question[] {
     
     // 過濾掉爭議題目034和被標記的題目
     return questions.filter((q: Question) => 
-      q.id !== '034' && !markedQuestions.some(marked => marked.id === q.id)
+      q.id !== '034' && !excludeMarked.some(marked => marked.id === q.id)
     );
   } catch (error) {
     console.error('讀取題目檔案時發生錯誤:', error);
@@ -283,8 +283,12 @@ function selectQuestionType(availableQuestions: Question[]): Question[] | 'exit'
 
 // Function to select answer history filter  
 function selectAnswerFilter(selectedQuestions: Question[], failedQuestions: Question[]): Question[] | 'back' {
+  // Determine the type(s) from selectedQuestions
+  const selectedTypes = [...new Set(selectedQuestions.map(q => q.type))];
+  
+  // Filter failed questions by the same type(s)
   const failedOfSelectedType = failedQuestions.filter(failed => 
-    selectedQuestions.some(q => q.id === failed.id)
+    selectedTypes.includes(failed.type)
   );
   
   const filterOptions = [
@@ -329,13 +333,14 @@ function selectAnswerFilter(selectedQuestions: Question[], failedQuestions: Ques
 
 // Main function to run the application
 function main(): void {
-  const allQuestions: Question[] = loadQuestions();
-  
-  // Load previous quiz data
+  // Load previous quiz data first
   const savedData = loadQuizData();
   failedQuestions = savedData.failedQuestions || [];
   answeredQuestions = savedData.answeredQuestions || [];
   markedQuestions = savedData.markedQuestions || [];
+  
+  // Now load questions with proper filtering
+  const allQuestions: Question[] = loadQuestions(markedQuestions);
 
   while (true) {
     // Filter out already answered questions for available pool
@@ -357,8 +362,12 @@ function main(): void {
     console.log(`答錯待重做：${failedCount}`);
     console.log(`尚未作答：${remainingCount}`);
     
-    // Create available question pool (unanswered + failed)
-    const availableQuestions = [...unansweredQuestions, ...failedQuestions];
+    // Create available question pool (unanswered + failed, but avoid duplicates)
+    const failedQuestionIds = new Set(failedQuestions.map(q => q.id));
+    const availableQuestions = [
+      ...unansweredQuestions.filter(q => !failedQuestionIds.has(q.id)),
+      ...failedQuestions
+    ];
     
     if (availableQuestions.length === 0) {
       console.log('\n🎉 恭喜！您已完成所有題目！');
