@@ -20,12 +20,12 @@ function yellowText(text: string): string {
 let failedQuestions: Question[] = [];
 let answeredQuestions: Question[] = [];
 let markedQuestions: Question[] = [];
-const DATA_FILE = path.join(__dirname, 'data', 'quiz-data.json');
+const DATA_FILE = path.join(__dirname, '..', 'src', 'data', 'quiz-data.json');
 
 // Function to load questions from a JSON file
 function loadQuestions(excludeMarked: Question[] = []): Question[] {
   try {
-    const filePath = path.join(__dirname, 'data', 'questions.json');
+    const filePath = path.join(__dirname, '..', 'src', 'data', 'questions.json');
     const fileContent = fs.readFileSync(filePath, 'utf-8');
     const questions = JSON.parse(fileContent);
     
@@ -338,29 +338,51 @@ function main(): void {
   failedQuestions = savedData.failedQuestions || [];
   answeredQuestions = savedData.answeredQuestions || [];
   markedQuestions = savedData.markedQuestions || [];
-  
-  // Now load questions with proper filtering
-  const allQuestions: Question[] = loadQuestions(markedQuestions);
 
   while (true) {
+    // Reload quiz data at the start of each loop (important for reset)
+    const currentData = loadQuizData();
+    failedQuestions = currentData.failedQuestions || [];
+    answeredQuestions = currentData.answeredQuestions || [];
+    markedQuestions = currentData.markedQuestions || [];
+    
+    // Load questions with current filtering (updates after reset)
+    const allQuestions: Question[] = loadQuestions(markedQuestions);
     // Filter out already answered questions for available pool
     const unansweredQuestions = allQuestions.filter(q => 
       !answeredQuestions.some(answered => answered.id === q.id)
     );
     
-    // Show progress info
+    // Show progress info with type breakdown
     const totalAvailableQuestions = allQuestions.length;
-    const markedCount = markedQuestions.length;
-    const answeredCount = answeredQuestions.length;
-    const failedCount = failedQuestions.length;
-    const remainingCount = unansweredQuestions.length;
+    const totalTrueFalse = allQuestions.filter(q => q.type === 'true-false').length;
+    const totalMultipleChoice = allQuestions.filter(q => q.type === 'multiple-choice').length;
+    
+    const markedTrueFalse = markedQuestions.filter(q => q.type === 'true-false').length;
+    const markedMultipleChoice = markedQuestions.filter(q => q.type === 'multiple-choice').length;
+    
+    const answeredTrueFalse = answeredQuestions.filter(q => q.type === 'true-false').length;
+    const answeredMultipleChoice = answeredQuestions.filter(q => q.type === 'multiple-choice').length;
+    
+    const failedTrueFalse = failedQuestions.filter(q => q.type === 'true-false').length;
+    const failedMultipleChoice = failedQuestions.filter(q => q.type === 'multiple-choice').length;
+    
+    const remainingTrueFalse = unansweredQuestions.filter(q => q.type === 'true-false').length;
+    const remainingMultipleChoice = unansweredQuestions.filter(q => q.type === 'multiple-choice').length;
     
     console.log('\n=== 測驗進度 ===');
-    console.log(`可用題數：${totalAvailableQuestions}`);
-    console.log(`已標記永不出現：${markedCount}`);
-    console.log(`已答對：${answeredCount}`);
-    console.log(`答錯待重做：${failedCount}`);
-    console.log(`尚未作答：${remainingCount}`);
+    console.log(`可用題數：${totalAvailableQuestions} (是非${totalTrueFalse}題, 選擇${totalMultipleChoice}題)`);
+    console.log(`已標記永不出現：${markedQuestions.length} (是非${markedTrueFalse}題, 選擇${markedMultipleChoice}題)`);
+    console.log(`已答對：${answeredQuestions.length} (是非${answeredTrueFalse}題, 選擇${answeredMultipleChoice}題)`);
+    console.log(`答錯待重做：${failedQuestions.length} (是非${failedTrueFalse}題, 選擇${failedMultipleChoice}題)`);
+    console.log(`尚未作答：${unansweredQuestions.length} (是非${remainingTrueFalse}題, 選擇${remainingMultipleChoice}題)`);
+    
+    // Show available questions breakdown for question type selection
+    const availableForTestingTF = remainingTrueFalse + failedTrueFalse;
+    const availableForTestingMC = remainingMultipleChoice + failedMultipleChoice;
+    console.log(`--- 可測驗題目分析 ---`);
+    console.log(`可測驗是非題：${availableForTestingTF} = 未答${remainingTrueFalse} + 答錯${failedTrueFalse}`);
+    console.log(`可測驗選擇題：${availableForTestingMC} = 未答${remainingMultipleChoice} + 答錯${failedMultipleChoice}`);
     
     // Create available question pool (unanswered + failed, but avoid duplicates)
     const failedQuestionIds = new Set(failedQuestions.map(q => q.id));
