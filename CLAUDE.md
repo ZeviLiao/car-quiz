@@ -27,7 +27,11 @@ npx tsc -p tsconfig.prod.json
 # Data processing pipeline (rebuild question database)
 npx tsc && node dist/tools/pdf-to-csv.js
 npx tsc && node dist/tools/pdf-to-csv-multiple-choice.js
-npx tsc && node dist/tools/csv-to-json.ts
+npx tsc && node dist/tools/csv-to-json.js
+
+# ID management tools (if needed)
+npx tsc && node dist/tools/fix-duplicate-ids.js
+npx tsc && node dist/tools/update-quiz-data-ids.js
 ```
 
 ## Core Architecture
@@ -44,7 +48,7 @@ npx tsc && node dist/tools/csv-to-json.ts
 
 **Question Loading Logic**:
 - Loads from `src/data/questions.json` via `loadQuestions()`
-- **Hardcoded filters**: Excludes controversial question ID '034'
+- **Hardcoded filters**: None
 - **Dynamic filters**: Excludes user-marked and previously answered questions
 - **Randomization**: Fisher-Yates shuffle algorithm via `shuffleArray()`
 
@@ -84,6 +88,8 @@ npx tsc && node dist/tools/csv-to-json.ts
 - `verify-explanations.ts`: QA tool for explanation coverage
 - `debug-matching.ts`: Diagnostic statistics for explanation matching
 - `add-explanations.ts`: Standalone explanation addition utility
+- `fix-duplicate-ids.ts`: ID deduplication tool (assigns TF/MC prefixes)
+- `update-quiz-data-ids.ts`: Migration tool for updating user progress data
 
 ## Build System
 
@@ -111,7 +117,7 @@ dist/
 ### Question Interface
 ```typescript
 interface Question {
-  id: string;                    // Format: "001", "002", etc.
+  id: string;                    // Format: "TF001"-"TF174" or "MC001"-"MC143"
   type: 'multiple-choice' | 'true-false';
   text: string;                  // Traditional Chinese question text
   correctAnswer: string;         // "1"|"2"|"3" for MC, "O"|"X" for TF
@@ -121,6 +127,12 @@ interface Question {
   explanation?: string;          // Only for true-false with 'X' answers
 }
 ```
+
+### Current ID Format System (CRITICAL)
+**After ID deduplication fix**:
+- **True-False Questions**: `TF001` through `TF174` (174 total)
+- **Multiple-Choice Questions**: `MC001` through `MC143` (143 total)
+- **Total Questions**: 317 with unique IDs (fixed duplicate ID problem)
 
 ### Progress Data Format
 ```typescript
@@ -139,9 +151,10 @@ interface QuizData {
 - **Progress Display**: Real-time statistics after each question
 
 ### Data Integrity
-- **Question Exclusion**: ID '034' hardcoded filter due to controversial content
+- **Question Exclusion**: None
 - **Explanation Coverage**: 64 true-false questions with 'X' answers have explanations
 - **Source Control**: CSV files in `src/tools/src_data/` are single source of truth
+- **ID Uniqueness**: All 317 questions now have unique IDs after deduplication fix
 
 ### Error Handling
 - **Graceful failures**: PDF parsing errors logged but don't crash application

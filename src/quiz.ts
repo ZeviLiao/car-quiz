@@ -29,9 +29,9 @@ function loadQuestions(excludeMarked: Question[] = []): Question[] {
     const fileContent = fs.readFileSync(filePath, 'utf-8');
     const questions = JSON.parse(fileContent);
     
-    // 過濾掉爭議題目034和被標記的題目
+    // 過濾掉被標記的題目
     return questions.filter((q: Question) => 
-      q.id !== '034' && !excludeMarked.some(marked => marked.id === q.id)
+      !excludeMarked.some(marked => marked.id === q.id)
     );
   } catch (error) {
     console.error('讀取題目檔案時發生錯誤:', error);

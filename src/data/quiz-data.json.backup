@@ -1,0 +1,258 @@
+{
+  "failedQuestions": [],
+  "answeredQuestions": [],
+  "markedQuestions": [
+    {
+      "id": "115",
+      "type": "multiple-choice",
+      "text": "連接火星塞之電線必須",
+      "options": {
+        "1": "耐高電壓",
+        "2": "愈長愈好",
+        "3": "一般銅 線即可"
+      },
+      "correctAnswer": "1"
+    },
+    {
+      "id": "084",
+      "type": "multiple-choice",
+      "text": "離合器片磨損時，有何種現象",
+      "options": {
+        "1": "引擎轉速上升但車速仍未見增加",
+        "2": "變速箱會跳檔",
+        "3": "轉向困難"
+      },
+      "correctAnswer": "1"
+    },
+    {
+      "id": "025",
+      "type": "multiple-choice",
+      "text": "汽車下陡坡或下長坡路段時，如何防止煞車效能減低",
+      "options": {
+        "1": "踩煞車踏板 即可",
+        "2": "踩煞車踏板及配合引擎煞車",
+        "3": "踩煞車踏板，並有效地使 用引擎煞車或排氣煞車"
+      },
+      "correctAnswer": "3"
+    },
+    {
+      "id": "142",
+      "type": "multiple-choice",
+      "text": "為了省錢把電瓶電容量換小，會有下列何種現象",
+      "options": {
+        "1": "大燈較省電",
+        "2": "引 擎較不易起動",
+        "3": "較耗燃油"
+      },
+      "correctAnswer": "2"
+    },
+    {
+      "id": "082",
+      "type": "multiple-choice",
+      "text": "輪胎氣壓過高時，易造成",
+      "options": {
+        "1": "耗油",
+        "2": "轉向吃重",
+        "3": "輪胎中央 快速磨損"
+      },
+      "correctAnswer": "3"
+    },
+    {
+      "id": "168",
+      "type": "true-false",
+      "text": "碟式煞車的優點為散熱快，煞車效果好。",
+      "correctAnswer": "O"
+    },
+    {
+      "id": "098",
+      "type": "multiple-choice",
+      "text": "電瓶電極裝錯，易使",
+      "options": {
+        "1": "直流發電機整流子燒毀",
+        "2": "交流發電機整 流粒燒毀",
+        "3": "無影響"
+      },
+      "correctAnswer": "2"
+    },
+    {
+      "id": "017",
+      "type": "multiple-choice",
+      "text": "煞車來令片磨損，則煞車踏板空檔會",
+      "options": {
+        "1": "變大",
+        "2": "變小",
+        "3": "不 變"
+      },
+      "correctAnswer": "1"
+    },
+    {
+      "id": "119",
+      "type": "multiple-choice",
+      "text": "拆下保險絲檢查，發現已燒斷時",
+      "options": {
+        "1": "用銅線代替，以免再燒斷",
+        "2": "用鐵絲代替",
+        "3": "更換安培數相同之保險絲並檢查電路"
+      },
+      "correctAnswer": "3"
+    },
+    {
+      "id": "071",
+      "type": "multiple-choice",
+      "text": "輪胎動平衡不良，汽車高速行駛會",
+      "options": {
+        "1": "煞車失靈",
+        "2": "方向盤震動",
+        "3": "方向盤無法操作"
+      },
+      "correctAnswer": "2"
+    },
+    {
+      "id": "024",
+      "type": "multiple-choice",
+      "text": "過度使用煞車會造成",
+      "options": {
+        "1": "來令片及煞車鼓過熱煞車效果會降低",
+        "2": "只有來令片會過熱，但不影響煞車效果",
+        "3": "不會影響煞車效 果"
+      },
+      "correctAnswer": "1"
+    },
+    {
+      "id": "089",
+      "type": "multiple-choice",
+      "text": "自動變速箱汽車的缺點是",
+      "options": {
+        "1": "不必操作離合器可換檔",
+        "2": "起步時不 會熄火",
+        "3": "引擎煞車效果較差"
+      },
+      "correctAnswer": "3"
+    },
+    {
+      "id": "082",
+      "type": "multiple-choice",
+      "text": "輪胎氣壓過高時，易造成",
+      "options": {
+        "1": "耗油",
+        "2": "轉向吃重",
+        "3": "輪胎中央 快速磨損"
+      },
+      "correctAnswer": "3"
+    },
+    {
+      "id": "036",
+      "type": "multiple-choice",
+      "text": "液化石油氣引擎之點火燃燒是靠",
+      "options": {
+        "1": "火星塞點火",
+        "2": "預熱塞加熱",
+        "3": "高壓高溫自燃著火"
+      },
+      "correctAnswer": "1"
+    },
+    {
+      "id": "096",
+      "type": "multiple-choice",
+      "text": "輪胎沾有油脂應該",
+      "options": {
+        "1": "用清水洗",
+        "2": "用汽油清洗",
+        "3": "用柴油擦 拭"
+      },
+      "correctAnswer": "1"
+    },
+    {
+      "id": "103",
+      "type": "multiple-choice",
+      "text": "起動馬達，消耗電流是由",
+      "options": {
+        "1": "發電機供給",
+        "2": "電瓶供給",
+        "3": "發 電機和電瓶供給"
+      },
+      "correctAnswer": "2"
+    },
+    {
+      "id": "111",
+      "type": "multiple-choice",
+      "text": "冷天發動引擎，電瓶化學作用遲緩，馬達搖轉引擎速度比夏天為",
+      "options": {
+        "1": "慢",
+        "2": "快",
+        "3": "一樣"
+      },
+      "correctAnswer": "1"
+    },
+    {
+      "id": "158",
+      "type": "true-false",
+      "text": "夜間黑暗處，檢查電瓶液時，可用打火機點火在電瓶附近當作照明工具。",
+      "correctAnswer": "X",
+      "explanation": "絕對不可使用明火，電瓶會產生易燃氣體"
+    },
+    {
+      "id": "169",
+      "type": "true-false",
+      "text": "引擎發動中的汽車不可拆下電瓶線。",
+      "correctAnswer": "O"
+    },
+    {
+      "id": "090",
+      "type": "multiple-choice",
+      "text": "自動排檔車拖吊時，若無法使驅動輪懸空，則必須遵照",
+      "options": {
+        "1": "低速，短 距離",
+        "2": "低速，長距離",
+        "3": "高速，短距離之原則，以避免自動變速 箱損壞"
+      },
+      "correctAnswer": "1"
+    },
+    {
+      "id": "161",
+      "type": "true-false",
+      "text": "鹵素燈泡，如用手觸摸燈泡會影響散熱縮短其使用壽命。",
+      "correctAnswer": "O"
+    },
+    {
+      "id": "141",
+      "type": "multiple-choice",
+      "text": "汽車經常超載，將容易使下列何種機件損壞",
+      "options": {
+        "1": "懸吊彈簧或避震器",
+        "2": "發電機或起動馬達",
+        "3": "輪胎螺帽"
+      },
+      "correctAnswer": "1"
+    },
+    {
+      "id": "081",
+      "type": "multiple-choice",
+      "text": "輪胎氣壓不平均時，易造成",
+      "options": {
+        "1": "引擎爆震",
+        "2": "煞車偏向",
+        "3": "不 影響"
+      },
+      "correctAnswer": "2"
+    },
+    {
+      "id": "065",
+      "type": "multiple-choice",
+      "text": "引擎發動很久無法到正常工作溫度，可能是",
+      "options": {
+        "1": "節溫器損壞或未裝",
+        "2": "機油添加過多",
+        "3": "排氣管阻塞"
+      },
+      "correctAnswer": "1"
+    },
+    {
+      "id": "151",
+      "type": "true-false",
+      "text": "自動排檔汽車，當電瓶電力不足以起動引擎時，可以用推車方式使引擎發 動。",
+      "correctAnswer": "X",
+      "explanation": "自排車無法用推車方式發動引擎"
+    }
+  ]
+}
